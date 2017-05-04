@@ -1,0 +1,9 @@
+@mixin dimensions($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin cust-flex($direction, $wrap) {
+  display: flex;
+  flex-flow: $direction $wrap;
+}

@@ -1,0 +1,76 @@
+@import "custMixins";
+
+.my-resume {
+
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+
+  font-family: "Verdana", sans-serif;
+  font-size: 13px;
+
+  @include cust-flex(row, nowrap);
+  align-items: flex-start;
+
+  .left-part {
+
+    @include cust-flex(column, nowrap);
+    align-items: center;
+    justify-content: flex-start;
+
+    @include dimensions(100vh, 30%);
+
+    background: linear-gradient(to right, #d8f8ff, #aee5ef);
+    border-right: 1px black solid;
+
+    article {
+      section {
+
+        &:first-child {
+          padding-top: 5px;
+        }
+
+        &.my-text, &.my-job {
+          padding: 10px;
+          text-align: center;
+        }
+
+        &.my-job {
+          font-weight: bold;
+        }
+
+        &.my-techs {
+          @include cust-flex(row, wrap);
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 20%;
+            height: 20%;
+
+            &.my-look {
+              border: 1px black solid;
+            }
+            &.small-img {
+              width: 15%;
+            }
+          }
+
+        }
+        
+      }
+    }
+
+  }
+
+  .right-part {
+
+    @include cust-flex(row, nowrap);
+    align-items: flex-start;
+
+    @include dimensions(100vh, 70%);
+    overflow-y: auto;
+
+  }
+
+}
