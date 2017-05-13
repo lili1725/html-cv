@@ -4,6 +4,47 @@
 }
 
 @mixin cust-flex($direction, $wrap) {
-  display: flex;
+  display: inline-flex;
   flex-flow: $direction $wrap;
 }
+
+@mixin cust-font($size) {
+  font-size: $size;
+}
+
+@mixin responsive-img($size) {
+  @media screen and (min-width: 1024px) {
+    width: $size;
+  }
+  @media screen and (max-width: 1024px) {
+    width: $size - 5%;
+  }
+}
+
+@mixin img-style() {
+
+  img {
+    @include responsive-img(15%);
+    margin: 2px;
+
+    &.my-look {
+      border: 1px black solid;
+    }
+    &.s-img {
+      @include responsive-img(11%);
+    }
+    &.m-img {
+      @include responsive-img(20%);
+    }
+    &.cust-img {
+      @include responsive-img(32%);
+    }
+    &.l-img {
+      @include responsive-img(40%);
+    }
+    &.xl-img {
+      @include responsive-img(50%);
+    }
+  }
+}
+
