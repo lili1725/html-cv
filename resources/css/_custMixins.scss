@@ -1,3 +1,6 @@
+$screen-size: 500px;
+$img-size : 40px;
+
 @mixin dimensions($height, $width) {
   height: $height;
   width: $width;
@@ -8,43 +11,42 @@
   flex-flow: $direction $wrap;
 }
 
-@mixin cust-font($size) {
-  font-size: $size;
-}
-
 @mixin responsive-img($size) {
-  @media screen and (min-width: 1024px) {
-    width: $size;
+  @media screen and (min-width: $screen-size) {
+    height: $size;
   }
-  @media screen and (max-width: 1024px) {
-    width: $size - 5%;
+  @media screen and (max-width: $screen-size) {
+    height: $size - 20px;
+
+    &.my-look {
+      height: $size + 30px;
+    }
   }
 }
 
 @mixin img-style() {
 
   img {
-    @include responsive-img(15%);
+    @include responsive-img($img-size);
     margin: 2px;
 
     &.my-look {
       border: 1px black solid;
     }
-    &.s-img {
-      @include responsive-img(11%);
-    }
-    &.m-img {
-      @include responsive-img(20%);
-    }
-    &.cust-img {
-      @include responsive-img(32%);
-    }
-    &.l-img {
-      @include responsive-img(40%);
-    }
-    &.xl-img {
-      @include responsive-img(50%);
-    }
+  }
+
+  .cust-img {
+    @include responsive-img($img-size);
+    padding: 5px;
+  }
+}
+
+@mixin responsive-font($font-size) {
+  @media screen and (min-width: $screen-size) {
+    font-size: $font-size;
+  }
+  @media screen and (max-width: $screen-size) {
+    font-size: $font-size - 2px;
   }
 }
 

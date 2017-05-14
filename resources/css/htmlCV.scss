@@ -7,9 +7,8 @@
   padding: 0;
 
   font-family: "Verdana", sans-serif;
-  font-size: 12px;
 
-  white-space: normal;
+  @include responsive-font(12px);
 }
 
 body.my-resume {
@@ -17,12 +16,12 @@ body.my-resume {
   width: 100vw;
   height: 100vh;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $screen-size) {
     @include cust-flex(row, nowrap);
     align-items: flex-start;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $screen-size) {
     @include cust-flex(column, nowrap);
     align-items: flex-start;
   }
@@ -30,7 +29,7 @@ body.my-resume {
   @include img-style();
 
   .bigger-font {
-    @include cust-font(13px);
+    @include responsive-font(13px);
   }
 
   .bold-font {
@@ -45,27 +44,27 @@ body.my-resume {
   .subtitle {
     text-align: center;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $screen-size) {
       padding: 15px 5px 10px 5px;
     }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $screen-size) {
       padding: 5px;
     }
 
-    @include cust-font(13px);
+    @include responsive-font(13px);
     white-space: nowrap;
   }
 
   section {
     &.my-techs {
-      @include cust-flex(row, wrap);
+      @include cust-flex(row, nowrap);
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: $screen-size) {
         align-items: center;
         justify-content: center;
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: $screen-size) {
         align-items: flex-start;
         justify-content: flex-start;
       }
@@ -74,11 +73,7 @@ body.my-resume {
 
   .left-part {
 
-    @include cust-flex(column, nowrap);
-    align-items: center;
-    justify-content: flex-start;
-
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $screen-size) {
       @include cust-flex(column, nowrap);
       align-items: center;
       justify-content: flex-start;
@@ -88,14 +83,14 @@ body.my-resume {
       @include dimensions(100%, 300px);
     }
 
-    @media screen and (max-width: 1024px) {
-      @include cust-flex(row, wrap);
+    @media screen and (max-width: $screen-size) {
+      @include cust-flex(column, nowrap);
       align-items: flex-start;
       justify-content: flex-start;
 
       border-bottom: 1px black solid;
 
-      @include dimensions(300px, 100%);
+      @include dimensions(230px, 100%);
 
       .responsive-column-header {
         @include cust-flex(column, nowrap);
@@ -115,28 +110,30 @@ body.my-resume {
 
     .bottom-part {
 
-      @include cust-flex(row, wrap);
+      flex: 1 1 0;
+      width: 100%;
 
-      @media screen and (min-width: 1024px) {
+      @include cust-flex(row, nowrap);
+
+      @media screen and (min-width: $screen-size) {
         align-items: center;
         justify-content: center;
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: $screen-size) {
         align-items: flex-start;
         justify-content: flex-start;
       }
 
-      flex: 1 1 0;
-
       .bottom-col {
+
         flex: 1 1 0;
         text-align: center;
         height: 60px;
 
         .second-row {
           height: 40px;
-          @include cust-flex(column, wrap);
+          @include cust-flex(column, nowrap);
           justify-content: center;
           align-items: center;
         }
@@ -150,11 +147,11 @@ body.my-resume {
 
   .right-part {
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $screen-size) {
       @include dimensions(100%, calc(100% - 300px));
     }
-    @media screen and (max-width: 1024px) {
-      @include dimensions(calc(100% - 300px), 100%);
+    @media screen and (max-width: $screen-size) {
+      @include dimensions(calc(100% - 230px), 100%);
     }
 
     overflow-y: auto;
