@@ -36,9 +36,34 @@ body.my-resume {
     font-weight: bold;
   }
 
+  .italic-font {
+    font-style: italic;
+  }
+
   .centered-text {
     text-align: center;
     padding: 5px;
+  }
+
+  .padding-5 {
+    padding: 5px;
+  }
+
+  .padding-bot {
+    padding-bottom: 5px;
+  }
+
+  .padding-cust {
+    padding: 5px 0 5px 0;
+  }
+
+  .blue-font {
+    color: $blue-font;
+  }
+
+  p {
+    text-align: justify;
+    text-justify: auto;
   }
 
   .subtitle {
@@ -127,7 +152,6 @@ body.my-resume {
 
       .bottom-col {
 
-        flex: 1 1 0;
         text-align: center;
         height: 60px;
 

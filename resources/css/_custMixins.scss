@@ -1,5 +1,6 @@
 $screen-size: 500px;
 $img-size : 40px;
+$blue-font: #428bca;
 
 @mixin dimensions($height, $width) {
   height: $height;
