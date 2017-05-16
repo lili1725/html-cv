@@ -53,6 +53,10 @@ body.my-resume {
     padding-bottom: 5px;
   }
 
+  .padding-top {
+    padding-top: 5px;
+  }
+
   .padding-cust {
     padding: 5px 0 5px 0;
   }
@@ -61,9 +65,14 @@ body.my-resume {
     color: $blue-font;
   }
 
-  p {
+  p, li {
     text-align: justify;
-    text-justify: auto;
+  }
+
+  li {
+    margin-left: 10px;
+    display: list-item;
+    list-style: disc outside;
   }
 
   .subtitle {
