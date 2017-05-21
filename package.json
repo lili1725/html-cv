@@ -1,0 +1,21 @@
+{
+  "name": "cv-alice",
+  "version": "1.0.0",
+  "description": "CV Alice",
+  "devDependencies": {
+    "node-sass": "4.5.3"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss resources/css/htmlCV.scss resources/css/htmlCV.css",
+    "build": "npm install && npm run build-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lili1725/html-cv.git"
+  },
+  "author": "lili1725",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lili1725/html-cv/issues"
+  }
+}
