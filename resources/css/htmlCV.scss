@@ -69,12 +69,6 @@ body.my-resume {
     text-align: justify;
   }
 
-  li {
-    margin-left: 10px;
-    display: list-item;
-    list-style: disc outside;
-  }
-
   .subtitle {
     text-align: center;
 
@@ -166,7 +160,7 @@ body.my-resume {
 
         .second-row {
           height: 40px;
-          @include cust-flex(column, nowrap);
+          @include cust-flex(row, nowrap);
           justify-content: center;
           align-items: center;
         }
