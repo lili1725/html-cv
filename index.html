@@ -2,8 +2,12 @@
 <html lang="fr" manifest="manifest.txt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+
+    <meta name="description" content="Mon cv en html/css">
+    <meta name="keywords" content="HTML,CSS,JavaScript,CV,Resume">
+    <meta name="author" content="Alice Rimassa">
 
     <title>Qui suis-je ?</title>
 
@@ -25,28 +29,28 @@
     <section class="responsive-row-header">
         <section class="subtitle">
             <figure>
-                <img class="my-look" src="resources/img/alili.png">
+                <img class="my-look" src="resources/img/alili.png" alt="Portrait">
             </figure>
         </section>
 
         <section class="responsive-column-header">
-            <section class="centered-text">Alice Rimassa</section>
-            <section class="bold-font subtitle">Développeuse Front Jr</section>
+            <h1 class="bigger-font centered-text">Alice Rimassa</h1>
+            <h1 class="subtitle">Développeuse Front Jr</h1>
             <section class="my-techs">
                 <figure>
-                    <img src="resources/img/logos/js-logo.svg">
+                    <img src="resources/img/logos/js-logo.svg" alt="JavaScript">
                 </figure>
                 <figure>
-                    <img src="resources/img/logos/html-logo.svg">
+                    <img src="resources/img/logos/html-logo.svg" alt="HTML">
                 </figure>
                 <figure>
-                    <img src="resources/img/logos/css-logo.svg">
+                    <img src="resources/img/logos/css-logo.svg" alt="CSS">
                 </figure>
                 <figure>
-                    <img src="resources/img/logos/git-logo.svg">
+                    <img src="resources/img/logos/git-logo.svg" alt="Git">
                 </figure>
                 <figure>
-                    <img src="resources/img/logos/agile-logo.png">
+                    <img src="resources/img/logos/agile-logo.png" alt="Agile">
                 </figure>
             </section>
         </section>
@@ -56,16 +60,16 @@
         <section class="bold-font subtitle">Notions</section>
         <section class="my-techs">
             <figure>
-                <img src="resources/img/logos/angular-logo.svg">
+                <img src="resources/img/logos/angular-logo.svg" alt="Angular">
             </figure>
             <figure>
-                <img src="resources/img/logos/react-logo.svg">
+                <img src="resources/img/logos/react-logo.svg" alt="React">
 
             </figure>
             <figure>
-                <img src="resources/img/spring-logo.png">
+                <img src="resources/img/spring-logo.png" alt="Spring">
             </figure>
-            <span class="cust-img">TDD</span>
+            <h3 class="cust-img">TDD</h3>
         </section>
     </section>
 
@@ -73,10 +77,10 @@
         <section class="bold-font subtitle">Intéressée par</section>
         <section class="my-techs">
             <figure>
-                <img src="resources/img/logos/nodejs-logo.svg">
+                <img src="resources/img/logos/nodejs-logo.svg" alt="Node JS">
             </figure>
             <figure>
-                <img src="resources/img/logos/vue-logo.svg">
+                <img src="resources/img/logos/vue-logo.svg" alt="Vue JS">
             </figure>
         </section>
     </section>
@@ -85,10 +89,10 @@
         <section class="bold-font subtitle">Langues</section>
         <section class="my-techs">
             <figure>
-                <img src="resources/img/logos/france-logo.svg">
+                <img src="resources/img/logos/france-logo.svg" alt="Français">
             </figure>
             <figure>
-                <img src="resources/img/logos/angleterre-logo.svg">
+                <img src="resources/img/logos/angleterre-logo.svg" alt="Anglais">
             </figure>
         </section>
     </section>
@@ -99,7 +103,7 @@
             <section class="space-nowrap padding-5">Ingénieur Bac+5</section>
             <section class="second-row">
                 <figure>
-                    <img src="resources/img/logos/esiea-logo.png">
+                    <a href="https://www.esiea.fr/"><img src="resources/img/logos/esiea-logo.png" alt="ESIEA"></a>
                 </figure>
             </section>
         </section>
@@ -108,7 +112,7 @@
             <section class="padding-5">Loisir</section>
             <section class="second-row">
                 <figure>
-                    <img src="resources/img/logos/equitation-logo.svg">
+                    <img src="resources/img/logos/equitation-logo.svg" alt="Equitation">
                 </figure>
             </section>
         </section>
@@ -117,10 +121,12 @@
             <section class="padding-5">Contact</section>
             <section class="second-row">
                 <figure>
-                    <a href="https://github.com/lili1725"><img src="resources/img/logos/github-logo.svg"></a>
+                    <a href="https://github.com/lili1725"><img src="resources/img/logos/github-logo.svg"
+                                                               alt="Github"></a>
                 </figure>
                 <figure>
-                    <a href="https://linkedin.com/in/arimassa"><img src="resources/img/logos/linkedin-logo.svg"></a>
+                    <a href="https://linkedin.com/in/arimassa"><img src="resources/img/logos/linkedin-logo.svg"
+                                                                    alt="Linkedin"></a>
                 </figure>
             </section>
         </section>
@@ -130,12 +136,12 @@
 
 <section class="right-part">
     <section class="top-part">
-        <section class="bold-font bigger-font padding-bot">Expériences</section>
+        <h2 class="bigger-font padding-bot">Expériences</h2>
         <section>
-            <section class="bold-font bigger-font padding-cust">Consultante pour Zenika Paris - depuis Septembre 2015
-            </section>
+            <h3 class="bigger-font padding-cust">Consultante pour Zenika Paris - depuis Septembre 2015
+            </h3>
             <section>
-                <p class="bold-font padding-cust blue-font">Allianz</p>
+                <h4 class="padding-cust blue-font">Allianz</h4>
                 <ul>
                     <li>
                         Participation à l'élaboration d'une application Web REST permettant de configurer les prix des
@@ -149,11 +155,11 @@
                     </li>
                 </ul>
 
-                <p class="bold-font italic-font padding-top">Environnement</p>
+                <h4 class="italic-font padding-top">Environnement</h4>
                 <p>Webix, LESS, JAVA 8/Spring Boot, Maven, MySQL, Scrum, Jira</p>
             </section>
             <section>
-                <p class="bold-font padding-cust blue-font">EDF R&D</p>
+                <h4 class="padding-cust blue-font">EDF R&D</h4>
                 <ul>
                     <li>
                         Développement d’une IHM responsive avec AngularJS pour ElasticSearch, afin d'étudier les données
@@ -174,11 +180,11 @@
                     </li>
                 </ul>
 
-                <p class="bold-font italic-font padding-top">Environnement</p>
+                <h4 class="italic-font padding-top">Environnement</h4>
                 <p>AngularJS/Bootstrap, Lodash, SASS, HighCharts/HighStock, ElasticSearch</p>
             </section>
             <section>
-                <p class="bold-font padding-cust blue-font">Texa</p>
+                <h4 class="padding-cust blue-font">Texa</h4>
 
                 <ul>
                     <li>
@@ -196,15 +202,15 @@
                     </li>
                 </ul>
 
-                <p class="bold-font italic-font padding-top">Environnement</p>
+                <h4 class="italic-font padding-top">Environnement</h4>
                 <p>AngularJS/Bootstrap, Java 7, Kanban</p>
             </section>
         </section>
         <section>
-            <section class="bold-font bigger-font padding-cust">Stagiaire</section>
+            <h3 class="bigger-font padding-cust">Stagiaire</h3>
 
             <section>
-                <p class="bold-font padding-cust blue-font">Zenika</p>
+                <h4 class="padding-cust blue-font">Zenika</h4>
 
                 <ul>
                     <li>
@@ -216,11 +222,11 @@
                     </li>
                 </ul>
 
-                <p class="bold-font italic-font padding-top">Environnement</p>
+                <h4 class="italic-font padding-top">Environnement</h4>
                 <p>Angular JS, Java/Spring, Neo4j, ElasticSearch, Trello</p>
             </section>
             <section>
-                <p class="bold-font padding-cust blue-font">Mediamétrie</p>
+                <h4 class="padding-cust blue-font">Mediamétrie</h4>
                 <ul>
                     <li>
                         Application Desktop de mesure d'audience des programmes TV tatoués
@@ -228,12 +234,19 @@
                     </li>
                 </ul>
 
-                <p class="bold-font italic-font padding-top">Environnement</p>
+                <h4 class="italic-font padding-top">Environnement</h4>
                 <p>C++, Civolution, SQLite</p>
             </section>
         </section>
         <section>
-            <section class="bold-font bigger-font padding-cust">Formations</section>
+            <h2 class="bigger-font padding-cust">Formations</h2>
+            <h4>Ingénieur en Informatique diplômée de l'ESIEA Paris en Septembre 2015 : Bac +5</h4>
+            <h4 class="padding-top">Langues</h4>
+            <ul>
+                <li>Français</li>
+                <li>Anglais : TOEIC (890) et deux mois de stage chez Nagra Media UK au Pays de Galles</li>
+            </ul>
+            <h4 class="padding-top">Formations professionnelles</h4>
             <p>Méthodes agiles/Scrum, Git, ReactJS</p>
         </section>
     </section>

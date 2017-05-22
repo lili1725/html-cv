@@ -32,6 +32,7 @@ $blue-font: #428bca;
     margin: 2px;
 
     &.my-look {
+      @include responsive-img($img-size + 15px);
       border: 1px black solid;
     }
   }

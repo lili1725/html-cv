@@ -9,12 +9,14 @@
   font-family: "Verdana", sans-serif;
 
   @include responsive-font(12px);
+
 }
 
 body.my-resume {
 
   width: 100vw;
   height: 100vh;
+
 
   @media screen and (min-width: $screen-size) {
     @include cust-flex(row, nowrap);
