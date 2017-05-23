@@ -6,7 +6,7 @@
     "node-sass": "4.5.3"
   },
   "scripts": {
-    "build-css": "node-sass --include-path scss resources/css/htmlCV.scss resources/css/htmlCV.css",
+    "build-css": "node-sass --include-path scss resources/css/index.scss resources/css/index.css",
     "build": "npm install && npm run build-css"
   },
   "repository": {

@@ -17,7 +17,6 @@ body.my-resume {
   width: 100vw;
   height: 100vh;
 
-
   @media screen and (min-width: $screen-size) {
     @include cust-flex(row, nowrap);
     align-items: flex-start;
@@ -187,13 +186,9 @@ body.my-resume {
 
     padding: 5px;
 
-    .top-part {
-
-      @include cust-flex(column, nowrap);
-      align-items: flex-start;
-      justify-content: flex-start;
-
-    }
+    @include cust-flex(column, nowrap);
+    align-items: flex-start;
+    justify-content: flex-start;
 
   }
 
