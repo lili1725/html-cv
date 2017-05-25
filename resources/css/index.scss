@@ -157,10 +157,8 @@ body.my-resume {
       .bottom-col {
 
         text-align: center;
-        height: 60px;
 
         .second-row {
-          height: 40px;
           @include cust-flex(row, nowrap);
           justify-content: center;
           align-items: center;
