@@ -1,6 +1,9 @@
 $screen-size: 500px;
-$img-size : 40px;
+$img-size: 40px;
 $blue-font: #428bca;
+$black-color: #000;
+$blue-gradient-1: #d8f8ff;
+$blue-gradient-2: #aee5ef;
 
 @mixin dimensions($height, $width) {
   height: $height;
@@ -25,7 +28,7 @@ $blue-font: #428bca;
   }
 }
 
-@mixin img-style() {
+@mixin img-style {
 
   img {
     @include responsive-img($img-size);
@@ -33,7 +36,7 @@ $blue-font: #428bca;
 
     &.my-look {
       @include responsive-img($img-size + 15px);
-      border: 1px black solid;
+      border: 1px $black-color solid;
     }
   }
 
