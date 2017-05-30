@@ -1,0 +1,177 @@
+{
+  "basics": {
+    "caption": "CV Alice",
+    "description": "Développeuse Front Jr - JavaScript à Paris",
+    "hobbies": "Loisirs",
+    "job": "Développeuse Front Jr",
+    "keywords": "HTML,CSS,JavaScript,CV,Resume",
+    "name": "Alice Rimassa",
+    "site": "https://lili1725.fr",
+    "title": "Qui suis-je ?",
+    "twitter": "@lilice_riri"
+  },
+  "contact": {
+    "github": "https://github.com/lili1725",
+    "linkedin": "https://fr.linkedin.com/in/arimassa",
+    "title": "Conact"
+  },
+  "education": {
+    "diploma": "Ingénieur Bac +5",
+    "languages": {
+      "english": "Anglais : TOEIC (890) et deux mois de stage chez Nagra Media UK au Pays de Galles",
+      "french": "Français",
+      "title": "Languages"
+    },
+    "pro": {
+      "title": "Formations professionnelles",
+      "skills": ["Méthodes agiles - Scrum", "Git", "ReactJS"]
+    },
+    "summary": "Ingénieur en Informatique diplômée de l'ESIEA Paris en Septembre 2015 : Bac +5",
+    "title": "Formations"
+  },
+  "img": {
+    "caption": {
+      "agile": "Agile",
+      "angular": "Angular",
+      "css": "CSS",
+      "english": "Anglais",
+      "esiea": "ESIEA",
+      "face": "Portrait",
+      "french": "Français",
+      "git": "Git",
+      "github": "GitHub",
+      "horse": "Equitation",
+      "html": "HTML",
+      "js": "JavaScript",
+      "linkedin": "Linkedin",
+      "node": "Node JS",
+      "react": "React JS",
+      "spring": "Spring",
+      "vue": "Vue JS"
+    },
+    "logos": "logos",
+    "path": "dist/img"
+  },
+  "skills": {
+    "tdd": "TDD",
+    "basic": "Notions",
+    "interest": "Intéressée par"
+  },
+  "work": {
+    "allianz": {
+      "name": "Allianz",
+      "skills": [
+        "Webix",
+        "LESS",
+        "Java 8",
+        "Spring Boot",
+        "Maven",
+        "MySQL",
+        "Scrum",
+        "Jira"
+      ],
+      "tasks": [
+        {
+          "description": "Participation à l'élaboration d'une application Web REST permettant de configurer les prix des offres d’assurances proposées par les agences aux consommateurs"
+        },
+        {
+          "description": "Développement de nouvelles fonctionnalités et correction de bugs"
+        },
+        {
+          "description": "Participation au POC CSS dont le but était d'évaluer la refonte de la charte graphique"
+        }
+      ]
+    },
+    "consulting": "Consultante pour Zenika Paris - depuis Septembre 2015",
+    "edf": {
+      "name": "EDF R&D",
+      "skills": [
+        "AngularJS",
+        "Bootstrap",
+        "Lodash",
+        "SASS",
+        "HighCharts",
+        "ElasticSearch"
+      ],
+      "tasks": [
+        {
+          "description": "Développement d’une IHM responsive avec AngularJS pour ElasticSearch, afin d'étudier les données des centrales nucléaires"
+        },
+        {
+          "description": "Tri par colonne et pagination"
+        },
+        {
+          "description": "Affichage des données filtrées et agrégées sur des diagrammes et histogrammes dynamiques"
+        },
+        {
+          "description": "Courbes avec lazy loading et affichage d'événements"
+        },
+        {
+          "description": "Mise en place d’outils de maintien de qualité du code JS et de tâches d'industrialisation avec Gulp"
+        }
+      ]
+    },
+    "environment": "Environnement",
+    "internship": "Stagiaire",
+    "mediametrie": {
+      "name": "Médiamétrie",
+      "skills": [
+        "C++",
+        "Civolution",
+        "SQLite"
+      ],
+      "tasks": [
+        {
+          "description": "Application Desktop de mesure d'audience des programmes TV tatoués et diffusés par Internet, pour Windows"
+        }
+      ]
+    },
+    "portfolio": "Expériences",
+    "texa": {
+      "name": "Texa",
+      "skills": [
+        "AngularJS",
+        "Bootstrap",
+        "Java 7",
+        "Kanban"
+      ],
+      "tasks": [
+        {
+          "description": "Développement sur une application Web de gestion des sinistres pour les assurances"
+        },
+        {
+          "description": "Développement de nouvelles fonctionnalités sur l'IHM et correction de bugs sur le backend"
+        },
+        {
+          "description": "Tests unitaires Jasmine (AngularJS), Tests d’intégration/unitaires en Java (Junit, Mockito),Tests d’acceptance avec Fitnesse"
+        },
+        {
+          "description": "Mise en place des pull requests sous Git"
+        }
+      ]
+    },
+    "zenika": {
+      "consulting": {
+      },
+      "internship": {
+        "skills": [
+          "Angular JS",
+          "Java 7",
+          "Spring",
+          "Neo4j",
+          "ElasticSearch",
+          "Trello"
+        ],
+        "tasks": [
+          {
+            "description": "Développement d’une application Web avec API REST de gestion des compétences agiles des consultants selon un modèle de données Graphe"
+          },
+          {
+            "description": "Travail sur l’expérience utilisateur et développement de l’IHM"
+          }
+        ]
+      },
+      "name": "Zenika"
+    }
+  }
+}

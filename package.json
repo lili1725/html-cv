@@ -8,13 +8,15 @@
     "postcss-cli": "4.0.0",
     "autoprefixer": "7.1.1",
     "imagemin-cli": "3.0.0",
-    "rimraf": "2.6.1"
+    "rimraf": "2.6.1",
+    "mustache": "2.3.0"
   },
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r dist/css/index.2.css",
-    "build": "npm install && npm run clean-dist && npm run images-min && npm run build-css",
+    "build": "npm install && npm run clean-dist && npm run images-min && npm run build-css && npm run build-html",
     "build-css": "npm run sass-lint && npm run sass-to-css && npm run autoprefixer",
-    "clean-dist": "rimraf dist",
+    "build-html": "mustache index.json index.mustache > index.html",
+    "clean-dist": "rimraf index.html && rimraf dist",
     "images-min": "imagemin resources/img/* --out-dir=dist/img && imagemin resources/img/logos/* --out-dir=dist/img/logos",
     "sass-lint": "sass-lint -v -q",
     "sass-to-css": "node-sass --include-path scss resources/css/index.scss dist/css/index.2.css"
