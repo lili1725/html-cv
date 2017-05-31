@@ -2,191 +2,149 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Verdana', sans-serif;
+  font-family: 'Courier New', sans-serif;
   margin: 0;
   padding: 0;
 
   @include responsive-font(12px);
-
 }
 
-body {
-  &.my-resume {
+html {
 
-    height: 100vh;
-    width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
 
-    @media screen and (min-width: $screen-size) {
-      @include cust-flex(row, nowrap);
-      align-items: flex-start;
-    }
+  body {
+    &.my-resume {
 
-    @media screen and (max-width: $screen-size) {
-      @include cust-flex(column, nowrap);
-      align-items: flex-start;
-    }
-
-    @include img-style;
-
-    .bigger-font {
-      @include responsive-font(13px);
-    }
-
-    .bold-font {
-      font-weight: bold;
-    }
-
-    .italic-font {
-      font-style: italic;
-    }
-
-    .centered-text {
-      padding: 5px;
-      text-align: center;
-    }
-
-    .padding-5 {
-      padding: 5px;
-    }
-
-    .padding-bot {
-      padding-bottom: 5px;
-    }
-
-    .padding-top {
-      padding-top: 5px;
-    }
-
-    .padding-cust {
-      padding: 5px 0;
-    }
-
-    .blue-font {
-      color: $blue-font;
-    }
-
-    .space-nowrap {
-      white-space: nowrap;
-    }
-
-    p,
-    li {
-      text-align: justify;
-    }
-
-    .subtitle {
-      text-align: center;
+      -webkit-overflow-scrolling: touch;
+      height: 100%;
+      overflow: hidden;
+      width: 100%;
 
       @media screen and (min-width: $screen-size) {
-        padding: 15px 5px 10px;
+        @include cust-flex(row, nowrap);
       }
-      @media screen and (max-width: $screen-size) {
+
+      @include img-style;
+
+      .bigger-font {
+        @include responsive-font(16px);
+      }
+
+      .bold-font {
+        font-weight: bold;
+        @include responsive-font(13px);
+      }
+
+      .italic-font {
+        font-style: italic;
+      }
+
+      .padding-5 {
         padding: 5px;
       }
 
-      @include responsive-font(13px);
-      white-space: nowrap;
-    }
+      .padding-bot {
+        padding-bottom: 5px;
+      }
 
-    section {
-      &.my-techs {
-        @include cust-flex(row, nowrap);
+      .padding-top {
+        padding-top: 5px;
+      }
+
+      .padding-cust {
+        padding: 5px 0;
+      }
+
+      .blue-font {
+        color: $blue-font;
+      }
+
+      .space-nowrap {
+        white-space: nowrap;
+      }
+
+      p,
+      li {
+        text-align: justify;
+      }
+
+      .subtitle {
 
         @media screen and (min-width: $screen-size) {
-          align-items: center;
-          justify-content: center;
+          padding: 8px 5px 8px 0;
         }
-
         @media screen and (max-width: $screen-size) {
-          align-items: flex-start;
-          justify-content: flex-start;
-        }
-      }
-    }
-
-    .left-part {
-
-      @media screen and (min-width: $screen-size) {
-        align-items: center;
-        border-right: 1px $black-color solid;
-        @include cust-flex(column, nowrap);
-        justify-content: flex-start;
-
-        @include dimensions(100%, 300px);
-      }
-
-      @media screen and (max-width: $screen-size) {
-        align-items: flex-start;
-        border-bottom: 1px $black-color solid;
-        @include cust-flex(column, nowrap);
-        justify-content: flex-start;
-
-        @include dimensions(230px, 100%);
-
-        .responsive-column-header {
-          @include cust-flex(column, nowrap);
-          align-items: flex-start;
-          flex: 1;
-          justify-content: flex-start;
+          padding: 2px 5px 5px 0;
         }
 
-        .responsive-row-header {
+        white-space: nowrap;
+      }
+
+      section {
+        &.my-techs {
           @include cust-flex(row, nowrap);
-          align-items: flex-start;
-          justify-content: flex-start;
-        }
-      }
 
-      background: linear-gradient(to right, $blue-gradient-1, $blue-gradient-2);
-
-      .bottom-part {
-
-        @include cust-flex(row, nowrap);
-
-        @media screen and (min-width: $screen-size) {
-          align-items: center;
-          justify-content: center;
-        }
-
-        @media screen and (max-width: $screen-size) {
-          align-items: flex-start;
-          justify-content: flex-start;
-        }
-
-        flex: 1 1 0;
-        width: 100%;
-
-        .bottom-col {
-
-          text-align: center;
-
-          .second-row {
-            @include cust-flex(row, nowrap);
+          @media screen and (min-width: $screen-size) {
             align-items: center;
             justify-content: center;
           }
         }
       }
-    }
 
-    .right-part {
+      .left-part {
 
-      @media screen and (min-width: $screen-size) {
-        @include dimensions(100%, calc(100% - 300px));
+        @media screen and (min-width: $screen-size) {
+
+          @include dimensions(100%, 300px);
+        }
+
+        @media screen and (max-width: $screen-size) {
+
+          @include dimensions(232px, 100%);
+
+          .responsive-row-header {
+            @include cust-flex(row, nowrap);
+          }
+
+        }
+
+        background: linear-gradient(to right, $blue-gradient-1, $blue-gradient-2);
+
+        padding: 5px;
+
+        .bottom-part {
+          @include cust-flex(row, nowrap);
+          width: 100%;
+
+          &.second-col {
+            align-items: center;
+            justify-content: flex-end;
+          }
+        }
+
       }
-      @media screen and (max-width: $screen-size) {
-        @include dimensions(calc(100% - 230px), 100%);
+
+      .right-part {
+
+        background-color: $light-gray;
+
+        @media screen and (min-width: $screen-size) {
+          @include dimensions(100%, calc(100% - 300px));
+        }
+        @media screen and (max-width: $screen-size) {
+          @include dimensions(calc(100% - 232px), 100%);
+        }
+
+        overflow-y: auto;
+
+        padding: 5px;
+
       }
 
-      @include cust-flex(column, nowrap);
-      align-items: flex-start;
-      justify-content: flex-start;
-
-      overflow-y: auto;
-      padding: 5px;
-
     }
-
   }
 }
 

@@ -4,6 +4,7 @@ $blue-font: #428bca;
 $black-color: #000;
 $blue-gradient-1: #d8f8ff;
 $blue-gradient-2: #aee5ef;
+$light-gray: #f1f1f1;
 
 @mixin dimensions($height, $width) {
   height: $height;
@@ -18,12 +19,16 @@ $blue-gradient-2: #aee5ef;
 @mixin responsive-img($size) {
   @media screen and (min-width: $screen-size) {
     height: $size;
+
+    &.my-look {
+      height: $size + 30px;
+    }
   }
   @media screen and (max-width: $screen-size) {
     height: $size - 20px;
 
     &.my-look {
-      height: $size + 30px;
+      height: $size + 20px;
     }
   }
 }
@@ -37,6 +42,10 @@ $blue-gradient-2: #aee5ef;
     &.my-look {
       @include responsive-img($img-size + 15px);
       border: 1px $black-color solid;
+    }
+
+    &.contact {
+      @include responsive-img($img-size - 10px);
     }
   }
 

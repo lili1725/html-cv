@@ -34,20 +34,21 @@
     <meta name="application-name" content="{{basics.caption}}">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" type="text/css" href="dist/css/index.2.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/index.3.css">
 </head>
 <body class="my-resume">
 
 <header class="left-part">
 
     <section class="responsive-row-header">
-        <figure class="subtitle">
-            <img class="my-look" src="{{&img.path}}/alili.png" alt="{{img.caption.face}}">
+
+        <figure>
+            <img class="my-look" src="{{&img.path}}/alili-hd.png" alt="{{img.caption.face}}">
         </figure>
 
-        <section class="responsive-column-header">
-            <h1 class="bigger-font centered-text">{{basics.name}}</h1>
-            <h1 class="subtitle">{{basics.job}}</h1>
+        <section>
+            <h1 class="bigger-font subtitle">{{basics.name}}</h1>
+            <h1 class="bigger-font subtitle">{{basics.job}}</h1>
             <section class="my-techs">
                 <figure>
                     <img src="{{&img.path}}/{{img.logos}}/js-logo.svg" alt="{{img.caption.js}}">
@@ -81,7 +82,7 @@
             <figure>
                 <img src="{{&img.path}}/{{img.logos}}/spring-logo.png" alt="{{img.caption.spring}}">
             </figure>
-            <h3 class="cust-img">{{skills.tdd}}</h3>
+            <h3 class="cust-img bigger-font">{{skills.tdd}}</h3>
         </section>
     </section>
 
@@ -98,50 +99,48 @@
     </section>
 
     <section class="responsive-row-header">
-        <p class="bold-font subtitle">{{education.languages.title}}</p>
-        <section class="my-techs">
+        <section>
+            <p class="space-nowrap bold-font subtitle">{{education.diploma}}</p>
             <figure>
-                <img src="{{&img.path}}/{{img.logos}}/france-logo.svg" alt="{{img.caption.french}}">
-            </figure>
-            <figure>
-                <img src="{{&img.path}}/{{img.logos}}/angleterre-logo.svg" alt="{{img.caption.english}}">
-            </figure>
-        </section>
-    </section>
-
-    <section class="responsive-row-header bottom-part">
-
-        <section class="bottom-col">
-            <p class="space-nowrap padding-5 centered-text">{{education.diploma}}</p>
-            <figure class="second-row">
                 <a href="https://www.esiea.fr/"><img src="{{&img.path}}/{{img.logos}}/esiea-logo.png"
                                                      alt="{{img.caption.esiea}}"></a>
             </figure>
         </section>
+        <section>
+            <p class="bold-font subtitle">{{education.languages.title}}</p>
+            <section class="my-techs">
+                <figure>
+                    <img src="{{&img.path}}/{{img.logos}}/france-logo.svg" alt="{{img.caption.french}}">
+                </figure>
+                <figure>
+                    <img src="{{&img.path}}/{{img.logos}}/angleterre-logo.svg" alt="{{img.caption.english}}">
+                </figure>
+            </section>
+        </section>
+    </section>
 
-        <section class="bottom-col">
-            <p class="padding-5 centered-text">{{basics.hobbies}}</p>
-            <figure class="second-row">
+    <section>
+
+        <p class="bold-font subtitle">{{basics.hobbies}}</p>
+        <section class="bottom-part">
+            <figure>
                 <img src="{{&img.path}}/{{img.logos}}/equitation-logo.svg" alt="{{img.caption.horse}}">
             </figure>
-        </section>
-
-        <section class="bottom-col">
-            <p class="padding-5 centered-text">{{contact.title}}</p>
-            <section class="second-row">
+            <section class="bottom-part second-col">
                 <figure>
-                    <a href="{{&contact.github}}"><img src="{{&img.path}}/{{img.logos}}/github-logo.svg"
+                    <a href="{{&contact.github}}"><img class="contact" src="{{&img.path}}/{{img.logos}}/github-logo.svg"
                                                        alt="{{img.caption.github}}"></a>
                 </figure>
                 <figure>
-                    <a href="{{&contact.linkedin}}"><img
-                            src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg"
-                            alt="{{img.caption.linkedin}}"></a>
+                    <a href="{{&contact.linkedin}}"><img class="contact"
+                                                         src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg"
+                                                         alt="{{img.caption.linkedin}}"></a>
                 </figure>
             </section>
         </section>
 
     </section>
+
 </header>
 
 <section class="right-part">
