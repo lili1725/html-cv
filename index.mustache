@@ -34,7 +34,7 @@
     <meta name="application-name" content="{{basics.caption}}">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" type="text/css" href="dist/css/index.3.css">
+    <link rel="stylesheet" type="text/css" href="css/index.4.css">
 </head>
 <body class="my-resume">
 
@@ -46,7 +46,7 @@
             <img class="my-look" src="{{&img.path}}/alili-hd.png" alt="{{img.caption.face}}">
         </figure>
 
-        <section>
+        <section class="padding-responsive">
             <h1 class="bigger-font subtitle">{{basics.name}}</h1>
             <h1 class="bigger-font subtitle">{{basics.job}}</h1>
             <section class="my-techs">
@@ -106,7 +106,7 @@
                                                      alt="{{img.caption.esiea}}"></a>
             </figure>
         </section>
-        <section>
+        <section class="padding-responsive">
             <p class="bold-font subtitle">{{education.languages.title}}</p>
             <section class="my-techs">
                 <figure>
@@ -157,7 +157,7 @@
                 {{/work.allianz.tasks}}
             </ul>
             <h4 class="italic-font padding-top">{{work.environment}}</h4>
-            <p>{{#work.allianz.skills}}{{.}}, {{/work.allianz.skills}}</p>
+            <p>{{#work.allianz.skills}}{{.}} {{/work.allianz.skills}}</p>
         </section>
         <section>
             <h4 class="padding-cust blue-font">{{work.edf.name}}</h4>
@@ -170,7 +170,7 @@
             </ul>
 
             <h4 class="italic-font padding-top">{{work.environment}}</h4>
-            <p>{{#work.edf.skills}}{{.}}, {{/work.edf.skills}}</p>
+            <p>{{#work.edf.skills}}{{.}} {{/work.edf.skills}}</p>
         </section>
         <section>
             <h4 class="padding-cust blue-font">{{work.texa.name}}</h4>
@@ -184,7 +184,7 @@
             </ul>
 
             <h4 class="italic-font padding-top">{{work.environment}}</h4>
-            <p>{{#work.texa.skills}}{{.}}, {{/work.texa.skills}}</p>
+            <p>{{#work.texa.skills}}{{.}} {{/work.texa.skills}}</p>
         </section>
     </section>
     <section>
@@ -202,7 +202,7 @@
             </ul>
 
             <h4 class="italic-font padding-top">{{work.environment}}</h4>
-            <p>{{#work.zenika.internship.skills}}{{.}}, {{/work.zenika.internship.skills}}</p>
+            <p>{{#work.zenika.internship.skills}}{{.}} {{/work.zenika.internship.skills}}</p>
         </section>
         <section>
             <h4 class="padding-cust blue-font">{{work.mediametrie.name}}</h4>
@@ -215,7 +215,7 @@
             </ul>
 
             <h4 class="italic-font padding-top">{{work.environment}}</h4>
-            <p>{{#work.mediametrie.skills}}{{.}}, {{/work.mediametrie.skills}}</p>
+            <p>{{#work.mediametrie.skills}}{{.}} {{/work.mediametrie.skills}}</p>
         </section>
     </section>
     <section>
@@ -227,7 +227,7 @@
             <li>{{education.languages.english}}</li>
         </ul>
         <h4 class="padding-top">{{education.pro.title}}</h4>
-        <p>{{#education.pro.skills}}{{.}}, {{/education.pro.skills}}</p>
+        <p>{{#education.pro.skills}}{{.}} {{/education.pro.skills}}</p>
     </section>
 </section>
 </body>

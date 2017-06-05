@@ -2,22 +2,32 @@ language: node_js
 sudo: required
 services:
 - docker
-node_js: 6
-cache:
-  directories:
-  - .node_modules/
+node_js: 7
 script: |
-  npm run build &&
-  docker build -t ${DOCKER_USER}/cv .
-after_success: |
-  if [ "${TRAVIS_BRANCH}" == "master" ]; then
-    docker login -u ${DOCKER_USER} -p ${DOCKER_PASS} && docker push ${DOCKER_USER}/cv
+  npm run build
+
+  DOCKER_IMAGE_DEFAULT=${DOCKER_USER}/cv
+  DOCKER_IMAGE_NAME=${DOCKER_IMAGE_DEFAULT}
+  if [ "${TRAVIS_BRANCH}" != "master" ]; then
+    DOCKER_IMAGE_NAME=${DOCKER_IMAGE_NAME}:${TRAVIS_BRANCH}
   fi
+
+  docker build -t ${DOCKER_IMAGE_NAME} .
+after_success: |
+  docker login -u ${DOCKER_USER} -p ${DOCKER_PASS} && docker push ${DOCKER_IMAGE_NAME}
 notifications:
   email: false
 deploy:
-  provider: script
+- provider: script
   skip_cleanup: true
   script: curl -u ${DEPLOY_USER}:${DEPLOY_PASS} -X POST https://dashboard-api.vibioh.fr/containers/cv/ --data-binary @docker-compose.yml
   on:
-    branch: master
+    all_branches: true
+    condition: ${TRAVIS_BRANCH} == 'master'
+- provider: script
+  skip_cleanup: true
+  script: >-
+    cat docker-compose.yml | sed "s|traefik.frontend.rule.*|traefik.frontend.rule: 'Host: www-${TRAVIS_BRANCH}.lili1725.fr'|" | sed "s|${DOCKER_IMAGE_DEFAULT}|${DOCKER_IMAGE_NAME}|" | curl -u ${DEPLOY_USER}:${DEPLOY_PASS} -X POST https://dashboard-api.vibioh.fr/containers/cv-${TRAVIS_BRANCH}/ --data-binary @-
+  on:
+    all_branches: true
+    condition: ${TRAVIS_BRANCH} != 'master'

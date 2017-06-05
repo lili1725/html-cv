@@ -50,7 +50,7 @@
       "vue": "Vue JS"
     },
     "logos": "logos",
-    "path": "dist/img"
+    "path": "img"
   },
   "skills": {
     "tdd": "TDD",

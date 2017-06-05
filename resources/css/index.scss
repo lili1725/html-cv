@@ -66,6 +66,12 @@ html {
         white-space: nowrap;
       }
 
+      .padding-responsive {
+        @media screen and (max-width: $screen-size) {
+          padding-left: 10px;
+        }
+      }
+
       p,
       li {
         text-align: justify;

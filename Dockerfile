@@ -1,3 +1,3 @@
 FROM vibioh/viws
 
-COPY ./ /www/
+COPY ./dist/ /www/
