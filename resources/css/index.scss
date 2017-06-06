@@ -102,6 +102,8 @@ html {
 
       .left-part {
 
+        @include cust-flex(column, nowrap);
+
         @media screen and (min-width: $screen-size) {
 
           @include dimensions(100%, 300px);
