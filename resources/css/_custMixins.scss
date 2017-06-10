@@ -43,10 +43,6 @@ $light-gray: #f1f1f1;
       @include responsive-img($img-size + 15px);
       border: 1px $black-color solid;
     }
-
-    &.contact {
-      @include responsive-img($img-size - 10px);
-    }
   }
 
   .cust-img {

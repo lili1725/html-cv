@@ -43,11 +43,23 @@
     <section class="responsive-row-header">
 
         <figure>
-            <img class="my-look" src="{{&img.path}}/alili-hd.png?v={{&version}}" alt="{{img.caption.face}}">
+            <img class="my-look" src="{{&img.path}}/alili-hd.png?v={{&version}}"
+                 alt="{{img.caption.face}}">
         </figure>
 
         <section class="padding-responsive">
-            <h1 class="bigger-font subtitle">{{basics.name}}</h1>
+            <section class="align-row">
+                <h1 class="bigger-font subtitle" title="{{&version}}">{{basics.name}}</h1>
+                <figure>
+                    <a href="{{&contact.github}}"><img src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
+                                                       alt="{{img.caption.github}}"></a>
+                </figure>
+                <figure>
+                    <a href="{{&contact.linkedin}}"><img
+                            src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
+                            alt="{{img.caption.linkedin}}"></a>
+                </figure>
+            </section>
             <h1 class="bigger-font subtitle">{{basics.job}}</h1>
             <section class="my-techs">
                 <figure>
@@ -84,10 +96,7 @@
             </figure>
             <h3 class="cust-img bigger-font">{{skills.tdd}}</h3>
         </section>
-    </section>
-
-    <section class="responsive-row-header">
-        <p class="bold-font subtitle">{{skills.interest}}</p>
+        <p class="bold-font subtitle responsive-hide">{{skills.interest}}</p>
         <section class="my-techs">
             <figure>
                 <img src="{{&img.path}}/{{img.logos}}/nodejs-logo.svg?v={{&version}}" alt="{{img.caption.node}}">
@@ -98,7 +107,7 @@
         </section>
     </section>
 
-    <section class="responsive-row-header">
+    <section class="responsive-row-header spaced">
         <section>
             <p class="space-nowrap bold-font subtitle">{{education.diploma}}</p>
             <figure>
@@ -113,32 +122,17 @@
                     <img src="{{&img.path}}/{{img.logos}}/france-logo.svg?v={{&version}}" alt="{{img.caption.french}}">
                 </figure>
                 <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/angleterre-logo.svg?v={{&version}}" alt="{{img.caption.english}}">
+                    <img src="{{&img.path}}/{{img.logos}}/angleterre-logo.svg?v={{&version}}"
+                         alt="{{img.caption.english}}">
                 </figure>
             </section>
         </section>
-    </section>
-
-    <section>
-
-        <p class="bold-font subtitle">{{basics.hobbies}}</p>
-        <section class="bottom-part">
+        <section class="padding-responsive">
+            <p class="bold-font subtitle">{{basics.hobbies}}</p>
             <figure>
                 <img src="{{&img.path}}/{{img.logos}}/equitation-logo.svg?v={{&version}}" alt="{{img.caption.horse}}">
             </figure>
-            <section class="bottom-part second-col">
-                <figure>
-                    <a href="{{&contact.github}}"><img class="contact" src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
-                                                       alt="{{img.caption.github}}"></a>
-                </figure>
-                <figure>
-                    <a href="{{&contact.linkedin}}"><img class="contact"
-                                                         src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
-                                                         alt="{{img.caption.linkedin}}"></a>
-                </figure>
-            </section>
         </section>
-
     </section>
 
 </header>
