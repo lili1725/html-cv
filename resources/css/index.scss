@@ -3,10 +3,17 @@
 * {
   box-sizing: border-box;
   font-family: 'Courier New', sans-serif;
+  line-height: 28px;
   margin: 0;
   padding: 0;
 
-  @include responsive-font(12px);
+  @include responsive-font($normal-font);
+
+  ul,
+  li {
+    list-style-type: none;
+  }
+
 }
 
 html {
@@ -29,46 +36,9 @@ html {
 
       @include img-style;
 
-      .bigger-font {
-        @include responsive-font(16px);
-      }
-
-      .bold-font {
-        font-weight: bold;
-        @include responsive-font(13px);
-      }
-
-      .italic-font {
-        font-style: italic;
-      }
-
-      .padding-5 {
-        padding: 5px;
-      }
-
-      .padding-bot {
-        padding-bottom: 5px;
-      }
-
-      .padding-top {
-        padding-top: 5px;
-      }
-
-      .padding-cust {
-        padding: 5px 0;
-      }
-
-      .blue-font {
-        color: $blue-font;
-      }
-
-      .space-nowrap {
-        white-space: nowrap;
-      }
-
       .padding-responsive {
         @media screen and (max-width: $screen-size) {
-          padding-left: 10px;
+          padding-left: $normal-padding;
         }
       }
 
@@ -80,10 +50,10 @@ html {
       .subtitle {
 
         @media screen and (min-width: $screen-size) {
-          padding: 8px 5px 8px 0;
+          padding: 12px 10px 12px 0;
         }
         @media screen and (max-width: $screen-size) {
-          padding: 2px 5px 5px 0;
+          padding: 5px 10px 10px 0;
         }
 
         white-space: nowrap;
@@ -91,11 +61,11 @@ html {
 
       section {
         &.my-techs {
-          @include cust-flex(row, nowrap);
+          @include cust-flex(row, wrap);
 
           @media screen and (min-width: $screen-size) {
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
           }
         }
       }
@@ -129,17 +99,11 @@ html {
 
         background: linear-gradient(to right, $blue-gradient-1, $blue-gradient-2);
 
-        padding: 5px;
-
-        .align-row {
-          @include cust-flex(row, nowrap);
-        }
+        padding: $normal-padding;
 
       }
 
       .right-part {
-
-        background-color: $light-gray;
 
         @media screen and (min-width: $screen-size) {
           @include dimensions(100%, calc(100% - 300px));
@@ -150,7 +114,7 @@ html {
 
         overflow-y: auto;
 
-        padding: 5px;
+        padding: $normal-padding;
 
       }
 

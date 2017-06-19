@@ -18,21 +18,24 @@
   "education": {
     "diploma": "Ingénieur Bac +5",
     "languages": {
-      "english": "Anglais : TOEIC (890) et deux mois de stage chez Nagra Media UK au Pays de Galles",
-      "french": "Français",
+      "english": "<b>Anglais</b> : TOEIC (890) et deux mois de stage chez Nagra Media UK au Pays de Galles",
       "title": "Langues"
     },
     "pro": {
       "title": "Formations professionnelles",
-      "skills": ["Méthodes agiles - Scrum", "Git", "ReactJS"]
+      "skills": [
+        "Méthodes agiles - Scrum",
+        "Git",
+        "ReactJS"
+      ]
     },
-    "summary": "Ingénieur en Informatique diplômée de l'ESIEA Paris en Septembre 2015 : Bac +5",
+    "summary": "<b>Ingénieur en Informatique diplômée de l'ESIEA Paris</b> en Septembre 2015 : Bac +5",
     "title": "Formations"
   },
   "img": {
     "caption": {
-      "agile": "Agile",
-      "angular": "Angular",
+      "agile": "Méthodes agiles",
+      "angular": "Angular JS",
       "css": "CSS",
       "english": "Anglais",
       "esiea": "ESIEA",
@@ -47,15 +50,16 @@
       "node": "Node JS",
       "react": "React JS",
       "spring": "Spring",
+      "tdd": "Test Driven Development",
       "vue": "Vue JS"
     },
     "logos": "logos",
     "path": "img"
   },
   "skills": {
+    "interest": "Intéressée aussi par",
     "tdd": "TDD",
-    "basic": "Notions",
-    "interest": "Intéressée par"
+    "title": "Compétences"
   },
   "work": {
     "allianz": {
@@ -72,13 +76,13 @@
       ],
       "tasks": [
         {
-          "description": "Participation à l'élaboration d'une application Web REST permettant de configurer les prix des offres d’assurances proposées par les agences aux consommateurs"
+          "description": "Participation à l'élaboration d'une <b>application Web REST</b> permettant de configurer les offres d’assurances proposées aux consommateurs."
         },
         {
-          "description": "Développement de nouvelles fonctionnalités et correction de bugs"
+          "description": "Développement de nouvelles fonctionnalités et correction de bugs."
         },
         {
-          "description": "Participation au POC CSS dont le but était d'évaluer la refonte de la charte graphique"
+          "description": "Participation au <b>POC CSS</b> dont le but était d'évaluer la refonte de la charte graphique."
         }
       ]
     },
@@ -86,7 +90,7 @@
     "edf": {
       "name": "EDF R&D",
       "skills": [
-        "AngularJS",
+        "Angular JS",
         "Bootstrap",
         "Lodash",
         "SASS",
@@ -95,19 +99,19 @@
       ],
       "tasks": [
         {
-          "description": "Développement d’une IHM responsive avec AngularJS pour ElasticSearch, afin d'étudier les données des centrales nucléaires"
+          "description": "Développement d’une <b>IHM responsive avec Angular JS pour ElasticSearch</b>, afin d'étudier les données des centrales nucléaires."
         },
         {
-          "description": "Tri par colonne et pagination"
+          "description": "Tri par colonne et pagination."
         },
         {
-          "description": "Affichage des données filtrées et agrégées sur des diagrammes et histogrammes dynamiques"
+          "description": "Affichage des données filtrées et agrégées sur des diagrammes et histogrammes dynamiques."
         },
         {
-          "description": "Courbes avec lazy loading et affichage d'événements"
+          "description": "Courbes avec <b>lazy loading</b> et affichage d'événements."
         },
         {
-          "description": "Mise en place d’outils de maintien de qualité du code JS et de tâches d'industrialisation avec Gulp"
+          "description": "Mise en place d’outils de maintien de <b>qualité du code JS</b> et de tâches d'industrialisation avec Gulp"
         }
       ]
     },
@@ -122,7 +126,7 @@
       ],
       "tasks": [
         {
-          "description": "Application Desktop de mesure d'audience des programmes TV tatoués et diffusés par Internet, pour Windows"
+          "description": "Application Desktop de mesure d'audience des programmes TV tatoués et diffusés par Internet, pour Windows."
         }
       ]
     },
@@ -130,23 +134,23 @@
     "texa": {
       "name": "Texa",
       "skills": [
-        "AngularJS",
+        "Angular JS",
         "Bootstrap",
         "Java 7",
         "Kanban"
       ],
       "tasks": [
         {
-          "description": "Développement sur une application Web de gestion des sinistres pour les assurances"
+          "description": "Développement sur une application Web de gestion des sinistres pour les assurances."
         },
         {
-          "description": "Développement de nouvelles fonctionnalités sur l'IHM et correction de bugs sur le backend"
+          "description": "Développement de nouvelles fonctionnalités sur l'<b>IHM</b> et correction de bugs sur le backend."
         },
         {
-          "description": "Tests unitaires Jasmine (AngularJS), Tests d’intégration/unitaires en Java (Junit, Mockito),Tests d’acceptance avec Fitnesse"
+          "description": "<b>Tests unitaires</b> Jasmine (Angular JS), <b>Tests d’intégration</b>/unitaires en Java (Junit, Mockito), <b>Tests d’acceptance</b> avec Fitnesse."
         },
         {
-          "description": "Mise en place des pull requests sous Git"
+          "description": "Mise en place des <b>pull requests sous Git</b>."
         }
       ]
     },
@@ -164,10 +168,10 @@
         ],
         "tasks": [
           {
-            "description": "Développement d’une application Web avec API REST de gestion des compétences agiles des consultants selon un modèle de données Graphe"
+            "description": "Développement d’une <b>application Web avec API REST</b> de gestion des compétences agiles des consultants selon un modèle de données Graphe."
           },
           {
-            "description": "Travail sur l’expérience utilisateur et développement de l’IHM"
+            "description": "Travail sur l’<b>expérience utilisateur</b> et développement de l’<b>IHM</b>."
           }
         ]
       },
