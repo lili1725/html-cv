@@ -48,8 +48,8 @@
         </figure>
 
         <section class="padding-responsive">
-            <h1 class="bigger-font subtitle" title="{{&version}}">{{basics.name}}</h1>
-            <h1 class="bigger-font subtitle">{{basics.job}}</h1>
+            <h1 class="bigger-font-with-padding" title="{{&version}}">{{basics.name}}</h1>
+            <h1 class="bigger-font-with-padding">{{basics.job}}</h1>
             <section class="my-techs">
                 <figure>
                     <a href="{{&contact.linkedin}}"><img
@@ -61,7 +61,7 @@
                                                        alt="{{img.caption.github}}" title="{{img.caption.github}}"></a>
                 </figure>
             </section>
-            <p class="space-nowrap bold-font subtitle">{{skills.title}}</p>
+            <h2 class="bigger-font-with-padding">{{skills.title}}</h2>
             <section class="my-techs">
                 <figure>
                     <img src="{{&img.path}}/{{img.logos}}/js-logo.svg?v={{&version}}" alt="{{img.caption.js}}"
@@ -95,21 +95,21 @@
                     <img src="{{&img.path}}/{{img.logos}}/spring-logo.png?v={{&version}}" alt="{{img.caption.spring}}"
                          title="{{img.caption.spring}}">
                 </figure>
-                <h3 class="bigger-font left-padding" title="{{img.caption.tdd}}">{{skills.tdd}}</h3>
+                <h3 class="left-padding" title="{{img.caption.tdd}}">{{skills.tdd}}</h3>
             </section>
         </section>
     </section>
 
     <section class="responsive-row-header spaced">
         <section>
-            <p class="space-nowrap bold-font subtitle">{{education.diploma}}</p>
+            <h2 class="bigger-font-with-padding">{{education.diploma}}</h2>
             <figure>
                 <a href="https://www.esiea.fr/"><img src="{{&img.path}}/{{img.logos}}/esiea-logo.png?v={{&version}}"
                                                      alt="{{img.caption.esiea}}" title="{{img.caption.esiea}}"></a>
             </figure>
         </section>
         <section class="padding-responsive">
-            <p class="bold-font subtitle">{{education.languages.title}}</p>
+            <h2 class="bigger-font-with-padding">{{education.languages.title}}</h2>
             <section class="my-techs">
                 <figure>
                     <img src="{{&img.path}}/{{img.logos}}/france-logo.svg?v={{&version}}" alt="{{img.caption.french}}"
@@ -126,11 +126,11 @@
 </header>
 
 <section class="right-part">
-    <h1 class="bigger-font padding-bot">{{work.portfolio}}</h1>
-    <section>
-        <h2 class="bigger-font padding-cust">{{work.consulting}}</h2>
+    <h1 class="title">{{work.portfolio}}</h1>
+    <h2 class="subtitle">{{work.consulting}}</h2>
+    <section class="normal-padding">
         <section>
-            <h4 class="padding-cust blue-font">{{work.allianz.name}}</h4>
+            <h4 class="blue-font">{{work.allianz.name}}</h4>
             <ul>
                 {{#work.allianz.tasks}}
                     <li>
@@ -138,11 +138,11 @@
                     </li>
                 {{/work.allianz.tasks}}
             </ul>
-            <h4 class="italic-font padding-top">{{work.environment}}</h4>
+            <h4 class="italic-font">{{work.environment}}</h4>
             <div>{{#work.allianz.skills}}<span class="orange-pin">{{.}}</span>{{/work.allianz.skills}}</div>
         </section>
         <section>
-            <h4 class="padding-cust blue-font">{{work.edf.name}}</h4>
+            <h4 class="blue-font">{{work.edf.name}}</h4>
             <ul>
                 {{#work.edf.tasks}}
                     <li>
@@ -151,11 +151,11 @@
                 {{/work.edf.tasks}}
             </ul>
 
-            <h4 class="italic-font padding-top">{{work.environment}}</h4>
+            <h4 class="italic-font">{{work.environment}}</h4>
             <div>{{#work.edf.skills}}<span class="orange-pin">{{.}}</span>{{/work.edf.skills}}</div>
         </section>
         <section>
-            <h4 class="padding-cust blue-font">{{work.texa.name}}</h4>
+            <h4 class="blue-font">{{work.texa.name}}</h4>
 
             <ul>
                 {{#work.texa.tasks}}
@@ -165,15 +165,13 @@
                 {{/work.texa.tasks}}
             </ul>
 
-            <h4 class="italic-font padding-top">{{work.environment}}</h4>
+            <h4 class="italic-font">{{work.environment}}</h4>
             <div>{{#work.texa.skills}}<span class="orange-pin">{{.}}</span>{{/work.texa.skills}}</div>
         </section>
-    </section>
-    <section>
-        <h3 class="padding-cust">{{work.internship}}</h3>
 
+        <h3>{{work.internship}}</h3>
         <section>
-            <h4 class="padding-cust blue-font">{{work.zenika.name}}</h4>
+            <h4 class="blue-font">{{work.zenika.name}}</h4>
 
             <ul>
                 {{#work.zenika.internship.tasks}}
@@ -183,12 +181,12 @@
                 {{/work.zenika.internship.tasks}}
             </ul>
 
-            <h4 class="italic-font padding-top">{{work.environment}}</h4>
+            <h4 class="italic-font">{{work.environment}}</h4>
             <div>{{#work.zenika.internship.skills}}
                 <span class="orange-pin">{{.}}</span>{{/work.zenika.internship.skills}}</div>
         </section>
         <section>
-            <h4 class="padding-cust blue-font">{{work.mediametrie.name}}</h4>
+            <h4 class="blue-font">{{work.mediametrie.name}}</h4>
             <ul>
                 {{#work.mediametrie.tasks}}
                     <li>
@@ -197,17 +195,20 @@
                 {{/work.mediametrie.tasks}}
             </ul>
 
-            <h4 class="italic-font padding-top">{{work.environment}}</h4>
+            <h4 class="italic-font">{{work.environment}}</h4>
             <div>{{#work.mediametrie.skills}}<span class="orange-pin">{{.}}</span>{{/work.mediametrie.skills}}</div>
         </section>
     </section>
-    <section>
-        <h2 class="bigger-font padding-cust">{{education.title}}</h2>
-        <h2 class="bigger-font padding-cust">{{&education.summary}}</h2>
+
+    <h1 class="title-with-margin">{{education.title}}</h1>
+    <h2 class="subtitle">{{&education.summary}}</h2>
+
+    <section class="normal-padding">
+
         <p>{{&education.languages.english}}</p>
-        <h4 class="padding-top">{{education.pro.title}}</h4>
+        <h4>{{education.pro.title}}</h4>
         <div>{{#education.pro.skills}}<span class="orange-pin">{{.}}</span>{{/education.pro.skills}}</div>
-        <h4 class="padding-top">{{skills.interest}}</h4>
+        <h4>{{skills.interest}}</h4>
         <section class="my-techs">
             <figure>
                 <img src="{{&img.path}}/{{img.logos}}/nodejs-logo.svg?v={{&version}}" alt="{{img.caption.node}}"
@@ -219,13 +220,15 @@
             </figure>
         </section>
     </section>
-    <section>
-        <h2 class="bigger-font padding-cust">{{basics.hobbies}}</h2>
+
+    <h1 class="title-with-margin">{{basics.hobbies}}</h1>
+    <section class="normal-padding">
         <figure>
             <img src="{{&img.path}}/{{img.logos}}/equitation-logo.svg?v={{&version}}" alt="{{img.caption.horse}}"
                  title="{{img.caption.horse}}">
         </figure>
     </section>
+
 </section>
 </body>
 </html>

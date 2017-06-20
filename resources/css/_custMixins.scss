@@ -4,6 +4,7 @@ $blue-font: #428bca;
 $black-color: #000;
 $blue-gradient-1: #d8f8ff;
 $blue-gradient-2: #aee5ef;
+$light-grey: #d3d3d3;
 $normal-font: 18px;
 $normal-padding: 10px;
 $orange-color: #ffa500;
@@ -51,12 +52,17 @@ $white-color: #fff;
   }
 }
 
-.bigger-font {
+%bigger-font {
   @include responsive-font($normal-font + 4px);
 
   & > * {
     @include responsive-font($normal-font + 4px);
   }
+}
+
+.bigger-font-with-padding {
+  @extend %bigger-font;
+  padding: $normal-padding 0;
 }
 
 .blue-font {
@@ -68,34 +74,27 @@ $white-color: #fff;
   }
 }
 
-.bold-font {
-  font-weight: bold;
-  @include responsive-font($normal-font + 1px);
+%classic-title {
+  @extend %bigger-font;
 
-  & > * {
-    @include responsive-font($normal-font + 1px);
-  }
+  background-color: $light-grey;
+  padding: $normal-padding;
+}
+
+.grey-background {
+  background-color: $light-grey;
 }
 
 .italic-font {
   font-style: italic;
 }
 
-
-.padding-bot {
-  padding-bottom: $normal-padding;
-}
-
-.padding-top {
-  padding-top: $normal-padding;
-}
-
-.padding-cust {
-  padding: $normal-padding 0;
-}
-
 .left-padding {
   padding-left: $normal-padding;
+}
+
+.normal-padding {
+  padding: $normal-padding;
 }
 
 .orange-pin {
@@ -103,12 +102,30 @@ $white-color: #fff;
   border-radius: 8px;
   color: $white-color;
   display: inline-block;
-  font-weight: 500;
   margin: 5px 5px 5px 0;
   padding: 1px 5px;
   white-space: nowrap;
 }
 
-.space-nowrap {
-  white-space: nowrap;
+.subtitle {
+  margin: 3px 0;
+  padding: $normal-padding;
+
+  @include responsive-font($normal-font + 1px);
+
+  & > * {
+    @include responsive-font($normal-font + 1px);
+  }
 }
+
+.title {
+  @extend %classic-title;
+}
+
+.title-with-margin {
+  @extend %classic-title;
+
+  margin: $normal-padding 0;
+}
+
+

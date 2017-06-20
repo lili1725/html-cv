@@ -47,18 +47,6 @@ html {
         text-align: justify;
       }
 
-      .subtitle {
-
-        @media screen and (min-width: $screen-size) {
-          padding: 12px 10px 12px 0;
-        }
-        @media screen and (max-width: $screen-size) {
-          padding: 5px 10px 10px 0;
-        }
-
-        white-space: nowrap;
-      }
-
       section {
         &.my-techs {
           @include cust-flex(row, wrap);
@@ -71,6 +59,9 @@ html {
       }
 
       .left-part {
+
+        background: linear-gradient(to right, $blue-gradient-1, $blue-gradient-2);
+        padding: $normal-padding;
 
         @include cust-flex(column, nowrap);
 
@@ -96,11 +87,6 @@ html {
           }
 
         }
-
-        background: linear-gradient(to right, $blue-gradient-1, $blue-gradient-2);
-
-        padding: $normal-padding;
-
       }
 
       .right-part {
@@ -113,8 +99,6 @@ html {
         }
 
         overflow-y: auto;
-
-        padding: $normal-padding;
 
       }
 
