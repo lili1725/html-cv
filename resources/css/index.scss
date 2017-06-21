@@ -91,14 +91,15 @@ html {
 
       .right-part {
 
+        overflow-y: auto;
+
         @media screen and (min-width: $screen-size) {
           @include dimensions(100%, calc(100% - 300px));
         }
+
         @media screen and (max-width: $screen-size) {
           @include dimensions(calc(100% - 165px), 100%);
         }
-
-        overflow-y: auto;
 
       }
 

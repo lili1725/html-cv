@@ -129,11 +129,11 @@
     <h1 class="title">{{work.portfolio}}</h1>
     <h2 class="subtitle">{{work.consulting}}</h2>
     <section class="normal-padding">
-        <section>
+        <section class="big-bottom-padding">
             <h4 class="blue-font">{{work.allianz.name}}</h4>
             <ul>
                 {{#work.allianz.tasks}}
-                    <li>
+                    <li class="bottom-padding">
                         {{&description}}
                     </li>
                 {{/work.allianz.tasks}}
@@ -141,11 +141,11 @@
             <h4 class="italic-font">{{work.environment}}</h4>
             <div>{{#work.allianz.skills}}<span class="orange-pin">{{.}}</span>{{/work.allianz.skills}}</div>
         </section>
-        <section>
+        <section class="big-bottom-padding">
             <h4 class="blue-font">{{work.edf.name}}</h4>
             <ul>
                 {{#work.edf.tasks}}
-                    <li>
+                    <li class="bottom-padding">
                         {{&description}}
                     </li>
                 {{/work.edf.tasks}}
@@ -154,12 +154,12 @@
             <h4 class="italic-font">{{work.environment}}</h4>
             <div>{{#work.edf.skills}}<span class="orange-pin">{{.}}</span>{{/work.edf.skills}}</div>
         </section>
-        <section>
+        <section class="big-bottom-padding">
             <h4 class="blue-font">{{work.texa.name}}</h4>
 
             <ul>
                 {{#work.texa.tasks}}
-                    <li>
+                    <li class="bottom-padding">
                         {{&description}}
                     </li>
                 {{/work.texa.tasks}}
@@ -169,13 +169,13 @@
             <div>{{#work.texa.skills}}<span class="orange-pin">{{.}}</span>{{/work.texa.skills}}</div>
         </section>
 
-        <h3>{{work.internship}}</h3>
-        <section>
+        <h3 class="small-padding">{{work.internship}}</h3>
+        <section class="big-bottom-padding">
             <h4 class="blue-font">{{work.zenika.name}}</h4>
 
             <ul>
                 {{#work.zenika.internship.tasks}}
-                    <li>
+                    <li class="bottom-padding">
                         {{&description}}
                     </li>
                 {{/work.zenika.internship.tasks}}
@@ -185,11 +185,11 @@
             <div>{{#work.zenika.internship.skills}}
                 <span class="orange-pin">{{.}}</span>{{/work.zenika.internship.skills}}</div>
         </section>
-        <section>
+        <section class="bottom-padding">
             <h4 class="blue-font">{{work.mediametrie.name}}</h4>
             <ul>
                 {{#work.mediametrie.tasks}}
-                    <li>
+                    <li class="bottom-padding">
                         {{&description}}
                     </li>
                 {{/work.mediametrie.tasks}}
@@ -205,10 +205,10 @@
 
     <section class="normal-padding">
 
-        <p>{{&education.languages.english}}</p>
-        <h4>{{education.pro.title}}</h4>
+        <p class="small-padding">{{&education.languages.english}}</p>
+        <h4 class="small-padding">{{education.pro.title}}</h4>
         <div>{{#education.pro.skills}}<span class="orange-pin">{{.}}</span>{{/education.pro.skills}}</div>
-        <h4>{{skills.interest}}</h4>
+        <h4 class="small-padding">{{skills.interest}}</h4>
         <section class="my-techs">
             <figure>
                 <img src="{{&img.path}}/{{img.logos}}/nodejs-logo.svg?v={{&version}}" alt="{{img.caption.node}}"

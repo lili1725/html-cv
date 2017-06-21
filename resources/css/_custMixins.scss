@@ -25,7 +25,7 @@ $white-color: #fff;
     height: $size;
   }
   @media screen and (max-width: $screen-size) {
-    height: $size - 20px;
+    height: $size - 10px;
   }
 }
 
@@ -60,6 +60,10 @@ $white-color: #fff;
   }
 }
 
+.big-bottom-padding {
+  padding-bottom: $normal-padding + 10px;
+}
+
 .bigger-font-with-padding {
   @extend %bigger-font;
   padding: $normal-padding 0;
@@ -67,11 +71,16 @@ $white-color: #fff;
 
 .blue-font {
   color: $blue-font;
+  padding-bottom: $normal-padding;
   @include responsive-font($normal-font + 2px);
 
   & > * {
     @include responsive-font($normal-font + 2px);
   }
+}
+
+.bottom-padding {
+  padding-bottom: $normal-padding;
 }
 
 %classic-title {
@@ -87,6 +96,7 @@ $white-color: #fff;
 
 .italic-font {
   font-style: italic;
+  padding-top: 5px;
 }
 
 .left-padding {
@@ -107,8 +117,11 @@ $white-color: #fff;
   white-space: nowrap;
 }
 
+.small-padding {
+  padding: 5px 0;
+}
+
 .subtitle {
-  margin: 3px 0;
   padding: $normal-padding;
 
   @include responsive-font($normal-font + 1px);
