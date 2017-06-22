@@ -41,7 +41,6 @@
 <header class="left-part">
 
     <section class="responsive-row-header">
-
         <figure>
             <img class="my-look" src="{{&img.path}}/alili-hd.png?v={{&version}}"
                  alt="{{img.caption.face}}">
@@ -61,67 +60,45 @@
                                                        alt="{{img.caption.github}}" title="{{img.caption.github}}"></a>
                 </figure>
             </section>
-            <h2 class="bigger-font-with-padding">{{skills.title}}</h2>
-            <section class="my-techs">
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/js-logo.svg?v={{&version}}" alt="{{img.caption.js}}"
-                         title="{{img.caption.js}}">
-                </figure>
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/html-logo.svg?v={{&version}}" alt="{{img.caption.html}}"
-                         title="{{img.caption.html}}">
-                </figure>
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/css-logo.svg?v={{&version}}" alt="{{img.caption.css}}"
-                         title="{{img.caption.css}}">
-                </figure>
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/git-logo.svg?v={{&version}}" alt="{{img.caption.git}}"
-                         title="{{img.caption.git}}">
-                </figure>
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/agile-logo.png?v={{&version}}" alt="{{img.caption.agile}}"
-                         title="{{img.caption.agile}}">
-                </figure>
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/angular-logo.svg?v={{&version}}" alt="{{img.caption.angular}}"
-                         title="{{img.caption.angular}}">
-                </figure>
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/react-logo.svg?v={{&version}}" alt="{{img.caption.react}}"
-                         title="{{img.caption.react}}">
-                </figure>
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/spring-logo.png?v={{&version}}" alt="{{img.caption.spring}}"
-                         title="{{img.caption.spring}}">
-                </figure>
-                <h3 class="left-padding" title="{{img.caption.tdd}}">{{skills.tdd}}</h3>
-            </section>
         </section>
+    </section>
+    <h2 class="bigger-font-with-padding responsive-hide">{{skills.title}}</h2>
+    <section class="my-techs">
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/js-logo.svg?v={{&version}}" alt="{{img.caption.js}}"
+                 title="{{img.caption.js}}">
+        </figure>
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/html-logo.svg?v={{&version}}" alt="{{img.caption.html}}"
+                 title="{{img.caption.html}}">
+        </figure>
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/css-logo.svg?v={{&version}}" alt="{{img.caption.css}}"
+                 title="{{img.caption.css}}">
+        </figure>
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/git-logo.svg?v={{&version}}" alt="{{img.caption.git}}"
+                 title="{{img.caption.git}}">
+        </figure>
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/agile-logo.png?v={{&version}}" alt="{{img.caption.agile}}"
+                 title="{{img.caption.agile}}">
+        </figure>
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/angular-logo.svg?v={{&version}}" alt="{{img.caption.angular}}"
+                 title="{{img.caption.angular}}">
+        </figure>
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/react-logo.svg?v={{&version}}" alt="{{img.caption.react}}"
+                 title="{{img.caption.react}}">
+        </figure>
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/spring-logo.png?v={{&version}}" alt="{{img.caption.spring}}"
+                 title="{{img.caption.spring}}">
+        </figure>
     </section>
 
-    <section class="responsive-row-header spaced">
-        <section>
-            <h2 class="bigger-font-with-padding">{{education.diploma}}</h2>
-            <figure>
-                <a href="https://www.esiea.fr/"><img src="{{&img.path}}/{{img.logos}}/esiea-logo.png?v={{&version}}"
-                                                     alt="{{img.caption.esiea}}" title="{{img.caption.esiea}}"></a>
-            </figure>
-        </section>
-        <section class="padding-responsive">
-            <h2 class="bigger-font-with-padding">{{education.languages.title}}</h2>
-            <section class="my-techs">
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/france-logo.svg?v={{&version}}" alt="{{img.caption.french}}"
-                         title="{{img.caption.french}}">
-                </figure>
-                <figure>
-                    <img src="{{&img.path}}/{{img.logos}}/angleterre-logo.svg?v={{&version}}"
-                         alt="{{img.caption.english}}" title="{{img.caption.english}}">
-                </figure>
-            </section>
-        </section>
-    </section>
+    <h2 class="bigger-font-with-padding">{{education.diploma}}</h2>
 
 </header>
 
@@ -202,10 +179,13 @@
 
     <h1 class="title-with-margin">{{education.title}}</h1>
     <h2 class="subtitle">{{&education.summary}}</h2>
+    <figure class="left-padding">
+        <a href="https://www.esiea.fr/"><img src="{{&img.path}}/{{img.logos}}/esiea-logo.png?v={{&version}}"
+                                             alt="{{img.caption.esiea}}" title="{{img.caption.esiea}}"></a>
+    </figure>
 
     <section class="normal-padding">
 
-        <p class="small-padding">{{&education.languages.english}}</p>
         <h4 class="small-padding">{{education.pro.title}}</h4>
         <div>{{#education.pro.skills}}<span class="orange-pin">{{.}}</span>{{/education.pro.skills}}</div>
         <h4 class="small-padding">{{skills.interest}}</h4>
@@ -218,7 +198,21 @@
                 <img src="{{&img.path}}/{{img.logos}}/vue-logo.svg?v={{&version}}" alt="{{img.caption.vue}}"
                      title="{{img.caption.vue}}">
             </figure>
+            <h3 class="left-padding" title="{{img.caption.tdd}}">{{skills.tdd}}</h3>
         </section>
+    </section>
+
+    <h1 class="title-with-margin">{{education.languages.title}}</h1>
+    <section class="normal-padding my-techs">
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/france-logo.svg?v={{&version}}" alt="{{img.caption.french}}"
+                 title="{{img.caption.french}}">
+        </figure>
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/angleterre-logo.svg?v={{&version}}"
+                 alt="{{img.caption.english}}" title="{{img.caption.english}}">
+        </figure>
+        <p class="small-padding">{{&education.languages.english}}</p>
     </section>
 
     <h1 class="title-with-margin">{{basics.hobbies}}</h1>

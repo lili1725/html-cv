@@ -12,7 +12,7 @@
         indexJson.version = stdout;
         require('fs').writeFile('./index.json', JSON.stringify(indexJson), function(err) {
                 if (err) throw err;
-                console.log('complete');
+                console.log('completed');
             }
         );
     });

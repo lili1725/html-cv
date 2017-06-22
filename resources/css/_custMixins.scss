@@ -7,7 +7,7 @@ $blue-gradient-2: #aee5ef;
 $light-grey: #d3d3d3;
 $normal-font: 18px;
 $normal-padding: 10px;
-$orange-color: #ffa500;
+$orange-color: #ffc966;
 $white-color: #fff;
 
 @mixin dimensions($height, $width) {
@@ -38,7 +38,7 @@ $white-color: #fff;
     &.my-look {
       border: 1px $black-color solid;
       border-radius: 90px;
-      height: 155px;
+      @include responsive-img(155px);
     }
   }
 }
@@ -66,7 +66,12 @@ $white-color: #fff;
 
 .bigger-font-with-padding {
   @extend %bigger-font;
-  padding: $normal-padding 0;
+  @media screen and (min-width: $screen-size) {
+    padding: $normal-padding 0;
+  }
+  @media screen and (max-width: $screen-size) {
+    padding: 5px 0;
+  }
 }
 
 .blue-font {
@@ -112,6 +117,7 @@ $white-color: #fff;
   border-radius: 8px;
   color: $white-color;
   display: inline-block;
+  font-weight: bold;
   margin: 5px 5px 5px 0;
   padding: 1px 5px;
   white-space: nowrap;
