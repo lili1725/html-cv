@@ -20,25 +20,28 @@ $white-color: #fff;
   flex-flow: $direction $wrap;
 }
 
-@mixin responsive-img($size) {
+@mixin responsive-img($size, $num-px) {
   @media screen and (min-width: $screen-size) {
     height: $size;
   }
   @media screen and (max-width: $screen-size) {
-    height: $size - 10px;
+    height: $size - $num-px;
   }
 }
 
 @mixin img-style {
 
-  img {
-    @include responsive-img($img-size);
-    margin: 2px;
+  figure {
+    padding: 3px;
 
-    &.my-look {
-      border: 1px $black-color solid;
-      border-radius: 90px;
-      @include responsive-img(155px);
+    img {
+      @include responsive-img($img-size, 5px);
+
+      &.my-look {
+        border: 1px $black-color solid;
+        border-radius: 90px;
+        @include responsive-img(155px, 15px);
+      }
     }
   }
 }

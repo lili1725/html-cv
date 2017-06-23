@@ -30,17 +30,7 @@ html {
       overflow: hidden;
       width: 100%;
 
-      @media screen and (min-width: $screen-size) {
-        @include cust-flex(row, nowrap);
-      }
-
       @include img-style;
-
-      .padding-responsive {
-        @media screen and (max-width: $screen-size) {
-          padding-left: $normal-padding;
-        }
-      }
 
       p,
       li {
@@ -50,11 +40,23 @@ html {
       section {
         &.my-techs {
           @include cust-flex(row, wrap);
+        }
+      }
 
-          @media screen and (min-width: $screen-size) {
+      @media screen and (min-width: $screen-size) {
+        @include cust-flex(row, nowrap);
+
+        section {
+          &.my-techs {
             align-items: center;
             justify-content: flex-start;
           }
+        }
+      }
+
+      @media screen and (max-width: $screen-size) {
+        .padding-responsive {
+          padding-left: $normal-padding;
         }
       }
 
@@ -72,14 +74,22 @@ html {
 
         @media screen and (max-width: $screen-size) {
 
-          @include dimensions(250px, 100%);
+          @include dimensions(300px, 100%);
 
-          .responsive-row-header {
+          .responsive-row {
             @include cust-flex(row, nowrap);
+          }
 
-            &.spaced {
-              justify-content: space-between;
-            }
+          .responsive-center {
+            text-align: center;
+          }
+
+          .responsive-center-content {
+            justify-content: center;
+          }
+
+          .responsive-column {
+            @include cust-flex(column, nowrap);
           }
 
           .responsive-hide {
@@ -98,7 +108,7 @@ html {
         }
 
         @media screen and (max-width: $screen-size) {
-          @include dimensions(calc(100% - 250px), 100%);
+          @include dimensions(calc(100% - 300px), 100%);
         }
 
       }

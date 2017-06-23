@@ -40,30 +40,19 @@
 
 <header class="left-part">
 
-    <section class="responsive-row-header">
+    <section class="responsive-row">
         <figure>
             <img class="my-look" src="{{&img.path}}/alili-hd.png?v={{&version}}"
                  alt="{{img.caption.face}}">
         </figure>
 
-        <section class="padding-responsive">
+        <section class="padding-responsive responsive-column responsive-center-content">
             <h1 class="bigger-font-with-padding" title="{{&version}}">{{basics.name}}</h1>
             <h1 class="bigger-font-with-padding">{{basics.job}}</h1>
-            <section class="my-techs">
-                <figure>
-                    <a href="{{&contact.linkedin}}"><img
-                            src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
-                            alt="{{img.caption.linkedin}}" title="{{img.caption.linkedin}}"></a>
-                </figure>
-                <figure>
-                    <a href="{{&contact.github}}"><img src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
-                                                       alt="{{img.caption.github}}" title="{{img.caption.github}}"></a>
-                </figure>
-            </section>
         </section>
     </section>
     <h2 class="bigger-font-with-padding responsive-hide">{{skills.title}}</h2>
-    <section class="my-techs">
+    <section class="my-techs responsive-center-content">
         <figure>
             <img src="{{&img.path}}/{{img.logos}}/js-logo.svg?v={{&version}}" alt="{{img.caption.js}}"
                  title="{{img.caption.js}}">
@@ -77,14 +66,6 @@
                  title="{{img.caption.css}}">
         </figure>
         <figure>
-            <img src="{{&img.path}}/{{img.logos}}/git-logo.svg?v={{&version}}" alt="{{img.caption.git}}"
-                 title="{{img.caption.git}}">
-        </figure>
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/agile-logo.png?v={{&version}}" alt="{{img.caption.agile}}"
-                 title="{{img.caption.agile}}">
-        </figure>
-        <figure>
             <img src="{{&img.path}}/{{img.logos}}/angular-logo.svg?v={{&version}}" alt="{{img.caption.angular}}"
                  title="{{img.caption.angular}}">
         </figure>
@@ -93,12 +74,27 @@
                  title="{{img.caption.react}}">
         </figure>
         <figure>
-            <img src="{{&img.path}}/{{img.logos}}/spring-logo.png?v={{&version}}" alt="{{img.caption.spring}}"
-                 title="{{img.caption.spring}}">
+            <img src="{{&img.path}}/{{img.logos}}/git-logo.svg?v={{&version}}" alt="{{img.caption.git}}"
+                 title="{{img.caption.git}}">
+        </figure>
+        <figure>
+            <img src="{{&img.path}}/{{img.logos}}/agile-logo.svg?v={{&version}}" alt="{{img.caption.agile}}"
+                 title="{{img.caption.agile}}">
         </figure>
     </section>
 
-    <h2 class="bigger-font-with-padding">{{education.diploma}}</h2>
+    <h2 class="bigger-font-with-padding responsive-center">{{education.diploma}}</h2>
+    <section class="my-techs responsive-center-content">
+        <figure>
+            <a href="{{&contact.linkedin}}"><img
+                    src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
+                    alt="{{img.caption.linkedin}}" title="{{img.caption.linkedin}}"></a>
+        </figure>
+        <figure>
+            <a href="{{&contact.github}}"><img src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
+                                               alt="{{img.caption.github}}" title="{{img.caption.github}}"></a>
+        </figure>
+    </section>
 
 </header>
 
@@ -198,7 +194,14 @@
                 <img src="{{&img.path}}/{{img.logos}}/vue-logo.svg?v={{&version}}" alt="{{img.caption.vue}}"
                      title="{{img.caption.vue}}">
             </figure>
-            <h3 class="left-padding" title="{{img.caption.tdd}}">{{skills.tdd}}</h3>
+            <figure>
+                <img src="{{&img.path}}/{{img.logos}}/spring-logo.png?v={{&version}}" alt="{{img.caption.spring}}"
+                     title="{{img.caption.spring}}">
+            </figure>
+            <figure>
+                <img src="{{&img.path}}/{{img.logos}}/tdd-logo.png?v={{&version}}"
+                     alt="{{img.caption.tdd}}">
+            </figure>
         </section>
     </section>
 

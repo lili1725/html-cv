@@ -29,7 +29,7 @@
         "ReactJS"
       ]
     },
-    "summary": "Ingénieur en Informatique diplômée de l'ESIEA Paris en Septembre 2015 : Bac +5",
+    "summary": "Ingénieur en Informatique diplômée de l'ESIEA Paris en Septembre 2015",
     "title": "Formations"
   },
   "img": {
@@ -57,7 +57,7 @@
     "path": "img"
   },
   "skills": {
-    "interest": "Intéressée aussi par",
+    "interest": "Notions basiques",
     "tdd": "TDD",
     "title": "Compétences"
   },
