@@ -17,7 +17,7 @@
     "build-css": "npm run sass-lint && npm run sass-to-css",
     "build-data": "node addVersionToJson.js",
     "build-html": "npm run build-data && mustache index.json index.mustache > index.html && npm run minify-html",
-    "build-google-resources": "cpx resources/google/* dist/",
+    "build-google-resources": "cpx resources/google/*.* dist/",
     "clean": "rimraf index.html && rimraf index.json && rimraf dist",
     "images-min": "imagemin resources/img/* --out-dir=dist/img && imagemin resources/img/logos/* --out-dir=dist/img/logos",
     "minify-html": "html-minifier -o dist/index.html index.html",
