@@ -33,7 +33,7 @@ html {
       @include img-style;
 
       p,
-      li {
+      li, .justify-text {
         text-align: justify;
       }
 
