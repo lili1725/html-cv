@@ -46,13 +46,14 @@
                  alt="{{img.caption.face}}">
         </figure>
 
-        <section class="padding-responsive responsive-column responsive-center-content">
+        <section class="padding-responsive responsive-column responsive-center">
             <h1 class="bigger-font-with-padding" title="{{&version}}">{{basics.name}}</h1>
             <h1 class="bigger-font-with-padding">{{basics.job}}</h1>
+            <h1 class="bigger-font-with-padding">{{education.diploma}}</h1>
         </section>
     </section>
-    <h2 class="bigger-font-with-padding responsive-hide">{{skills.title}}</h2>
-    <section class="my-techs responsive-center-content">
+    <h1 class="bigger-font-with-padding responsive-hide">{{skills.title}}</h1>
+    <section class="my-techs responsive-center">
         <figure>
             <img src="{{&img.path}}/{{img.logos}}/js-logo.svg?v={{&version}}" alt="{{img.caption.js}}"
                  title="{{img.caption.js}}">
@@ -83,8 +84,8 @@
         </figure>
     </section>
 
-    <h2 class="bigger-font-with-padding responsive-center">{{education.diploma}}</h2>
-    <section class="my-techs responsive-center-content">
+    <h1 class="bigger-font-with-padding responsive-hide">{{contact.title}}</h1>
+    <section class="my-techs responsive-center">
         <figure>
             <a href="{{&contact.linkedin}}"><img
                     src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
@@ -112,7 +113,7 @@
                 {{/work.allianz.tasks}}
             </ul>
             <h4 class="italic-font">{{work.environment}}</h4>
-            <div>{{#work.allianz.skills}}<span class="orange-pin">{{.}}</span>{{/work.allianz.skills}}</div>
+            <div>{{#work.allianz.skills}}<span class="blue-pin">{{.}}</span>{{/work.allianz.skills}}</div>
         </section>
         <section class="big-bottom-padding">
             <h4 class="blue-font">{{work.edf.name}}</h4>
@@ -125,7 +126,7 @@
             </ul>
 
             <h4 class="italic-font">{{work.environment}}</h4>
-            <div>{{#work.edf.skills}}<span class="orange-pin">{{.}}</span>{{/work.edf.skills}}</div>
+            <div>{{#work.edf.skills}}<span class="blue-pin">{{.}}</span>{{/work.edf.skills}}</div>
         </section>
         <section class="big-bottom-padding">
             <h4 class="blue-font">{{work.texa.name}}</h4>
@@ -139,7 +140,7 @@
             </ul>
 
             <h4 class="italic-font">{{work.environment}}</h4>
-            <div>{{#work.texa.skills}}<span class="orange-pin">{{.}}</span>{{/work.texa.skills}}</div>
+            <div>{{#work.texa.skills}}<span class="blue-pin">{{.}}</span>{{/work.texa.skills}}</div>
         </section>
 
         <h3 class="small-padding">{{work.internship}}</h3>
@@ -156,7 +157,7 @@
 
             <h4 class="italic-font">{{work.environment}}</h4>
             <div>{{#work.zenika.internship.skills}}
-                <span class="orange-pin">{{.}}</span>{{/work.zenika.internship.skills}}</div>
+                <span class="blue-pin">{{.}}</span>{{/work.zenika.internship.skills}}</div>
         </section>
         <section class="bottom-padding">
             <h4 class="blue-font">{{work.mediametrie.name}}</h4>
@@ -169,7 +170,7 @@
             </ul>
 
             <h4 class="italic-font">{{work.environment}}</h4>
-            <div>{{#work.mediametrie.skills}}<span class="orange-pin">{{.}}</span>{{/work.mediametrie.skills}}</div>
+            <div>{{#work.mediametrie.skills}}<span class="blue-pin">{{.}}</span>{{/work.mediametrie.skills}}</div>
         </section>
     </section>
 
@@ -183,7 +184,7 @@
     <section class="normal-padding">
 
         <h4 class="small-padding">{{education.pro.title}}</h4>
-        <div>{{#education.pro.skills}}<span class="orange-pin">{{.}}</span>{{/education.pro.skills}}</div>
+        <div>{{#education.pro.skills}}<span class="blue-pin">{{.}}</span>{{/education.pro.skills}}</div>
         <h4 class="small-padding">{{skills.interest}}</h4>
         <section class="my-techs">
             <figure>

@@ -74,17 +74,13 @@ html {
 
         @media screen and (max-width: $screen-size) {
 
-          @include dimensions(300px, 100%);
+          @include dimensions(270px, 100%);
 
           .responsive-row {
             @include cust-flex(row, nowrap);
           }
 
           .responsive-center {
-            text-align: center;
-          }
-
-          .responsive-center-content {
             justify-content: center;
           }
 
@@ -108,7 +104,7 @@ html {
         }
 
         @media screen and (max-width: $screen-size) {
-          @include dimensions(calc(100% - 300px), 100%);
+          @include dimensions(calc(100% - 270px), 100%);
         }
 
       }

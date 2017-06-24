@@ -7,7 +7,6 @@ $blue-gradient-2: #aee5ef;
 $light-grey: #d3d3d3;
 $normal-font: 18px;
 $normal-padding: 10px;
-$orange-color: #ffc966;
 $white-color: #fff;
 
 @mixin dimensions($height, $width) {
@@ -34,6 +33,10 @@ $white-color: #fff;
   figure {
     padding: 3px;
 
+    &.left-padding {
+      padding-left: $normal-padding;
+    }
+
     img {
       @include responsive-img($img-size, 5px);
 
@@ -51,7 +54,7 @@ $white-color: #fff;
     font-size: $font-size;
   }
   @media screen and (max-width: $screen-size) {
-    font-size: $font-size - 2px;
+    font-size: $font-size - 4px;
   }
 }
 
@@ -107,16 +110,12 @@ $white-color: #fff;
   padding-top: 5px;
 }
 
-.left-padding {
-  padding-left: $normal-padding;
-}
-
 .normal-padding {
   padding: $normal-padding;
 }
 
-.orange-pin {
-  background-color: $orange-color;
+.blue-pin {
+  background-color: $blue-font;
   border-radius: 8px;
   color: $white-color;
   display: inline-block;
