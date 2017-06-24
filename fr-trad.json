@@ -1,13 +1,13 @@
 {
   "basics": {
     "caption": "CV Alice",
-    "description": "Développeuse Front Junior à Paris",
+    "description": "Développeuse Front Junior à Paris. Je développe en Javascript, HTML, CSS et je participe régulièrement à des événements pour me former sur les dernières technologies Frontend comme React JS ou Angular. Débutante Java et convaincue par les méthodes agiles, je suis capable d'intervenir sur des applications Web JS/Java dans un contexte projet. Rigoureuse, investie et toujours de bonne humeur ;-), j'apporterai ma pierre à votre édifice.",
     "hobbies": "Loisirs",
     "job": "Développeuse Front Junior",
     "keywords": "HTML,CSS,JavaScript,CV,Resume",
     "name": "Alice Rimassa",
     "site": "https://lili1725.fr",
-    "title": "Qui suis-je ?",
+    "title": "Curriculum Vitae",
     "twitter": "@lilice_riri"
   },
   "contact": {
@@ -86,7 +86,7 @@
         }
       ]
     },
-    "consulting": "Consultante pour Zenika Paris - depuis Septembre 2015",
+    "consulting": "Consultante pour Zenika Paris depuis Septembre 2015",
     "edf": {
       "name": "EDF R&D",
       "skills": [
@@ -116,6 +116,7 @@
       ]
     },
     "environment": "Environnement",
+    "exp": "2 ans d'expérience",
     "internship": "Stagiaire",
     "mediametrie": {
       "name": "Médiamétrie",
