@@ -9,13 +9,15 @@
     "imagemin-cli": "3.0.0",
     "rimraf": "2.6.1",
     "mustache": "2.3.0",
-    "html-minifier": "3.5.2"
+    "html-minifier": "3.5.2",
+    "cpx": "1.5.0"
   },
   "scripts": {
     "build": "npm install && npm run clean && npm run images-min && npm run build-css && npm run build-html",
     "build-css": "npm run sass-lint && npm run sass-to-css",
     "build-data": "node addVersionToJson.js",
-    "build-html": "npm run build-data && mustache index.json index.mustache > index.html && npm run minify-html",
+    "build-html": "npm run build-html-resources && npm run build-data && mustache index.json index.mustache > index.html && npm run minify-html",
+    "build-html-resources": "cpx resources/html/*.html dist/",
     "clean": "rimraf index.html && rimraf index.json && rimraf dist",
     "images-min": "imagemin resources/img/* --out-dir=dist/img && imagemin resources/img/logos/* --out-dir=dist/img/logos",
     "minify-html": "html-minifier -o dist/index.html index.html",
