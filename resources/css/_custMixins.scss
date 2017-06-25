@@ -1,4 +1,5 @@
-$screen-size: 500px;
+$screen-width: 500px;
+$screen-height: 615px;
 $img-size: 40px;
 $blue-font: #428bca;
 $black-color: #000;
@@ -20,10 +21,10 @@ $white-color: #fff;
 }
 
 @mixin responsive-img($size, $num-px) {
-  @media screen and (min-width: $screen-size) {
+  @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
     height: $size;
   }
-  @media screen and (max-width: $screen-size) {
+  @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
     height: $size - $num-px;
   }
 }
@@ -50,10 +51,10 @@ $white-color: #fff;
 }
 
 @mixin responsive-font($font-size) {
-  @media screen and (min-width: $screen-size) {
+  @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
     font-size: $font-size;
   }
-  @media screen and (max-width: $screen-size) {
+  @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
     font-size: $font-size - 4px;
   }
 }
@@ -72,10 +73,10 @@ $white-color: #fff;
 
 .bigger-font-with-padding {
   @extend %bigger-font;
-  @media screen and (min-width: $screen-size) {
+  @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
     padding: $normal-padding 0;
   }
-  @media screen and (max-width: $screen-size) {
+  @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
     padding: 5px 0;
   }
 }
