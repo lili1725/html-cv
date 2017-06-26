@@ -3,7 +3,7 @@
     "caption": "CV Alice",
     "description": "Je développe en <b>Javascript, HTML, CSS</b> et j'interviens à Paris.<br/><br/>Je participe régulièrement à des événements pour me former sur les dernières technologies Frontend comme React JS ou Angular.<br/>Débutante Java et convaincue par les <b>méthodes agiles</b>, je suis capable d'intervenir sur des <b>applications Web JS/Java</b> dans un contexte projet.<br/><br/>Rigoureuse et investie, j'apporterai ma pierre à votre édifice dans la bonne humeur 🙂.",
     "hobbies": "Loisirs",
-    "job": "Développeuse Front Junior",
+    "job": "Développeuse Front Bac +5",
     "keywords": "Alice Rimassa,HTML,CSS,JavaScript,CV,Resume",
     "name": "Alice Rimassa",
     "shortDescription": "Développeuse Front Junior à Paris. Javascript - HTML - CSS - J'apporterai ma pierre à votre édifice 🙂.",
@@ -18,9 +18,8 @@
     "title": "Contact"
   },
   "education": {
-    "diploma": "Ingénieur Bac +5",
     "languages": {
-      "english": "<b>Anglais</b> : TOEIC (890) et deux mois de stage chez Nagra Media UK au Pays de Galles",
+      "english": "<b>Anglais</b> : TOEIC (890), deux mois de stage chez Nagra Media UK au Pays de Galles, travail à l'oral et à l'écrit chez Allianz.",
       "title": "Langues"
     },
     "pro": {
@@ -88,7 +87,7 @@
         }
       ]
     },
-    "consulting": "Consultante pour Zenika Paris depuis Septembre 2015",
+    "consulting": "Consultante junior pour Zenika Paris depuis Septembre 2015",
     "edf": {
       "name": "EDF R&D",
       "skills": [

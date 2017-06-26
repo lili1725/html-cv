@@ -75,7 +75,7 @@ html {
 
         @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
 
-          @include dimensions(270px, 100%);
+          @include dimensions(215px, 100%);
 
           .responsive-row {
             @include cust-flex(row, nowrap);
@@ -105,7 +105,7 @@ html {
         }
 
         @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
-          @include dimensions(calc(100% - 270px), 100%);
+          @include dimensions(calc(100% - 215px), 100%);
         }
 
       }

@@ -48,10 +48,22 @@
 
         <section class="padding-responsive responsive-column responsive-center">
             <h1 class="bigger-font-with-padding" title="{{&version}}">{{basics.name}}</h1>
-            <h1 class="bigger-font-with-padding">{{basics.job}}</h1>
-            <h1 class="bigger-font-with-padding">{{education.diploma}}</h1>
+            <h1 class="bigger-font-with-padding dark-blue">{{basics.job}}</h1>
+            <h1 class="bigger-font-with-padding responsive-hide">{{contact.title}}</h1>
+            <section class="my-techs">
+                <figure>
+                    <a href="{{&contact.linkedin}}"><img
+                            src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
+                            alt="{{img.caption.linkedin}}" title="{{img.caption.linkedin}}"></a>
+                </figure>
+                <figure>
+                    <a href="{{&contact.github}}"><img src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
+                                                       alt="{{img.caption.github}}" title="{{img.caption.github}}"></a>
+                </figure>
+            </section>
         </section>
     </section>
+
     <h1 class="bigger-font-with-padding responsive-hide">{{skills.title}}</h1>
     <section class="my-techs responsive-center">
         <figure>
@@ -71,10 +83,6 @@
                  title="{{img.caption.angular}}">
         </figure>
         <figure>
-            <img src="{{&img.path}}/{{img.logos}}/react-logo.svg?v={{&version}}" alt="{{img.caption.react}}"
-                 title="{{img.caption.react}}">
-        </figure>
-        <figure>
             <img src="{{&img.path}}/{{img.logos}}/git-logo.svg?v={{&version}}" alt="{{img.caption.git}}"
                  title="{{img.caption.git}}">
         </figure>
@@ -83,20 +91,6 @@
                  title="{{img.caption.agile}}">
         </figure>
     </section>
-
-    <h1 class="bigger-font-with-padding responsive-hide">{{contact.title}}</h1>
-    <section class="my-techs responsive-center">
-        <figure>
-            <a href="{{&contact.linkedin}}"><img
-                    src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
-                    alt="{{img.caption.linkedin}}" title="{{img.caption.linkedin}}"></a>
-        </figure>
-        <figure>
-            <a href="{{&contact.github}}"><img src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
-                                               alt="{{img.caption.github}}" title="{{img.caption.github}}"></a>
-        </figure>
-    </section>
-
 </header>
 
 <section class="right-part">
@@ -195,20 +189,24 @@
         <h4 class="small-padding">{{skills.interest}}</h4>
         <section class="my-techs">
             <figure>
-                <img src="{{&img.path}}/{{img.logos}}/nodejs-logo.svg?v={{&version}}" alt="{{img.caption.node}}"
-                     title="{{img.caption.node}}">
+                <img src="{{&img.path}}/{{img.logos}}/react-logo.svg?v={{&version}}" alt="{{img.caption.react}}"
+                     title="{{img.caption.react}}">
             </figure>
             <figure>
                 <img src="{{&img.path}}/{{img.logos}}/vue-logo.svg?v={{&version}}" alt="{{img.caption.vue}}"
                      title="{{img.caption.vue}}">
             </figure>
             <figure>
-                <img src="{{&img.path}}/{{img.logos}}/spring-logo.png?v={{&version}}" alt="{{img.caption.spring}}"
-                     title="{{img.caption.spring}}">
+                <img src="{{&img.path}}/{{img.logos}}/nodejs-logo.svg?v={{&version}}" alt="{{img.caption.node}}"
+                     title="{{img.caption.node}}">
             </figure>
             <figure>
                 <img src="{{&img.path}}/{{img.logos}}/tdd-logo.png?v={{&version}}"
                      alt="{{img.caption.tdd}}">
+            </figure>
+            <figure>
+                <img src="{{&img.path}}/{{img.logos}}/spring-logo.png?v={{&version}}" alt="{{img.caption.spring}}"
+                     title="{{img.caption.spring}}">
             </figure>
         </section>
     </section>
