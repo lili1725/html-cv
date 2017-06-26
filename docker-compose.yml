@@ -7,7 +7,6 @@ services:
     - -csp
     - default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'
     labels:
-      traefik.backend.healthcheck.path: '/health'
       traefik.frontend.passHostHeader: 'true'
       traefik.frontend.rule: 'Host: lili1725.fr,www.lili1725.fr'
       traefik.port: '1080'
