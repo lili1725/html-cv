@@ -22,96 +22,95 @@ html {
   overflow: hidden;
   width: 100%;
 
-  body {
-    &.my-resume {
+  .my-resume {
 
-      -webkit-overflow-scrolling: touch;
-      height: 100%;
-      overflow: hidden;
-      width: 100%;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
 
-      @include img-style;
+    @include img-style;
 
-      p,
-      li,
-      .justify-text {
-        text-align: justify;
+    p,
+    li,
+    .justify-text {
+      text-align: justify;
+    }
+
+    section {
+      &.my-techs {
+        @include cust-flex(row, wrap);
       }
+    }
+
+    @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
+      @include cust-flex(row, nowrap);
 
       section {
         &.my-techs {
-          @include cust-flex(row, wrap);
+          align-items: center;
+          justify-content: flex-start;
         }
       }
+    }
+
+    @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
+      .padding-responsive {
+        padding-left: 5px;
+      }
+    }
+
+    .left-part {
+
+      background: linear-gradient(to right, $blue-gradient-1, $blue-gradient-2);
+      padding: $normal-padding;
+
+      @include cust-flex(column, nowrap);
 
       @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
-        @include cust-flex(row, nowrap);
 
-        section {
-          &.my-techs {
-            align-items: center;
-            justify-content: flex-start;
-          }
-        }
+        @include dimensions(100%, 300px);
       }
 
       @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
-        .padding-responsive {
-          padding-left: $normal-padding;
+
+        @include dimensions(215px, 100%);
+
+        .responsive-row {
+          @include cust-flex(row, nowrap);
         }
+
+        .responsive-center {
+          justify-content: center;
+        }
+
+        .responsive-column {
+          @include cust-flex(column, nowrap);
+        }
+
+        .responsive-hide {
+          display: none;
+        }
+
+      }
+    }
+
+    .right-part {
+
+      overflow-y: auto;
+
+      @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
+        @include dimensions(100%, calc(100% - 300px));
       }
 
-      .left-part {
-
-        background: linear-gradient(to right, $blue-gradient-1, $blue-gradient-2);
-        padding: $normal-padding;
-
-        @include cust-flex(column, nowrap);
-
-        @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
-
-          @include dimensions(100%, 300px);
-        }
-
-        @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
-
-          @include dimensions(215px, 100%);
-
-          .responsive-row {
-            @include cust-flex(row, nowrap);
-          }
-
-          .responsive-center {
-            justify-content: center;
-          }
-
-          .responsive-column {
-            @include cust-flex(column, nowrap);
-          }
-
-          .responsive-hide {
-            display: none;
-          }
-
-        }
-      }
-
-      .right-part {
-
-        overflow-y: auto;
-
-        @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
-          @include dimensions(100%, calc(100% - 300px));
-        }
-
-        @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
-          @include dimensions(calc(100% - 215px), 100%);
-        }
-
+      @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
+        @include dimensions(calc(100% - 215px), 100%);
       }
 
     }
+
   }
+
 }
 
 @media print {

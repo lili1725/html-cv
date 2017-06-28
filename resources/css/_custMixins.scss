@@ -155,4 +155,17 @@ $white-color: #fff;
   margin: $normal-padding 0;
 }
 
+.type-animation {
+  animation: type 3s steps(60, end);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
 
