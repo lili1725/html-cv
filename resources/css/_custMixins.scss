@@ -107,6 +107,15 @@ $white-color: #fff;
   padding-bottom: $normal-padding;
 }
 
+.bounce-in {
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-name: bounceIn;
+  animation-timing-function: linear;
+
+  opacity: 0;
+}
+
 %classic-title {
   @extend %bigger-font;
 
@@ -155,17 +164,24 @@ $white-color: #fff;
   margin: $normal-padding 0;
 }
 
-.type-animation {
-  animation: type 3s steps(60, end);
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate3d(0, 0, 0);
+  }
 
-@keyframes type {
-  from {
-    width: 0;
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.89);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
   }
 }
-
-
