@@ -1,9 +1,14 @@
 {
   "basics": {
     "caption": "CV Alice",
-    "description": "Je développe en <b>Javascript, HTML, CSS</b> et j'interviens à Paris.<br/><br/>Je participe régulièrement à des événements pour me former sur les dernières technologies Frontend comme React JS ou Angular.<br/>Débutante Java et convaincue par les <b>méthodes agiles</b>, je suis capable d'intervenir sur des <b>applications Web JS/Java</b> dans un contexte projet.<br/><br/>Rigoureuse et investie, j'apporterai ma pierre à votre édifice dans la bonne humeur 🙂.",
-    "hobbies": "Loisirs",
-    "job": "Développeuse Front Bac +5",
+    "description": [
+      "Je développe en <strong>Javascript, HTML, CSS</strong> et j'interviens à Paris.",
+      "Je participe régulièrement à des événements pour me former sur les dernières technologies Frontend comme React JS ou Angular.",
+      "Débutante Java et convaincue par les <strong>méthodes agiles</strong>, je suis capable d'intervenir sur des <strong>applications Web JS/Java</strong> dans un contexte projet.",
+      "Rigoureuse et investie, j'apporterai ma pierre à votre édifice dans la bonne humeur 🙂."
+    ],
+    "hobbies": "Loisir",
+    "job": "Développeuse Front",
     "keywords": "Alice Rimassa,HTML,CSS,JavaScript,CV,Resume",
     "name": "Alice Rimassa",
     "shortDescription": "Développeuse Front Junior à Paris. Javascript - HTML - CSS - J'apporterai ma pierre à votre édifice 🙂.",
@@ -19,7 +24,7 @@
   },
   "education": {
     "languages": {
-      "english": "<b>Anglais</b> : TOEIC (890), deux mois de stage chez Nagra Media UK au Pays de Galles, travail à l'oral et à l'écrit chez Allianz.",
+      "english": "<strong>Anglais</strong> : TOEIC (890), deux mois de stage chez Nagra Media UK au Pays de Galles, travail à l'oral et à l'écrit chez Allianz.",
       "title": "Langues"
     },
     "pro": {
@@ -30,7 +35,7 @@
         "ReactJS"
       ]
     },
-    "summary": "Ingénieur en Informatique diplômée de l'ESIEA Paris en Septembre 2015",
+    "summary": "Ingénieur en Informatique diplômée de l'ESIEA Paris <i><small>en 2015</i></small>",
     "title": "Formations"
   },
   "img": {
@@ -38,6 +43,7 @@
       "agile": "Méthodes agiles",
       "angular": "Angular JS",
       "css": "CSS",
+      "eco": "Respectez l'environnement",
       "english": "Anglais",
       "esiea": "ESIEA",
       "face": "Portrait",
@@ -77,17 +83,17 @@
       ],
       "tasks": [
         {
-          "description": "Participation à l'élaboration d'une <b>application Web REST</b> permettant de configurer les offres d’assurances proposées aux consommateurs."
+          "description": "Participation à l'élaboration d'une <strong>application Web REST</strong> permettant de configurer les offres d’assurances proposées aux consommateurs."
         },
         {
           "description": "Développement de nouvelles fonctionnalités et correction de bugs."
         },
         {
-          "description": "Participation au <b>POC CSS</b> dont le but était d'évaluer la refonte de la charte graphique."
+          "description": "Participation au <strong>POC CSS</strong> dont le but était d'évaluer la refonte de la charte graphique."
         }
       ]
     },
-    "consulting": "Consultante junior pour Zenika Paris depuis Septembre 2015",
+    "consulting": "Consultante junior pour Zenika Paris <i><small>entre aujourd'hui et Septembre 2015</i></small>",
     "edf": {
       "name": "EDF R&D",
       "skills": [
@@ -100,7 +106,7 @@
       ],
       "tasks": [
         {
-          "description": "Développement d’une <b>IHM responsive avec Angular JS pour ElasticSearch</b>, afin d'étudier les données des centrales nucléaires."
+          "description": "Développement d’une <strong>IHM responsive avec Angular JS pour ElasticSearch</strong>, afin d'étudier les données des centrales nucléaires."
         },
         {
           "description": "Tri par colonne et pagination."
@@ -109,16 +115,15 @@
           "description": "Affichage des données filtrées et agrégées sur des diagrammes et histogrammes dynamiques."
         },
         {
-          "description": "Courbes avec <b>lazy loading</b> et affichage d'événements."
+          "description": "Courbes avec <strong>lazy loading</strong> et affichage d'événements."
         },
         {
-          "description": "Mise en place d’outils de maintien de <b>qualité du code JS</b> et de tâches d'industrialisation avec Gulp"
+          "description": "Mise en place d’outils de maintien de <strong>qualité du code JS</strong> et de tâches d'industrialisation avec Gulp"
         }
       ]
     },
     "environment": "Environnement",
-    "exp": "2 ans d'expérience",
-    "internship": "Stagiaire",
+    "internship": "Stagiaire <i><small>avant Septembre 2015</i></small>",
     "mediametrie": {
       "name": "Médiamétrie",
       "skills": [
@@ -132,7 +137,7 @@
         }
       ]
     },
-    "portfolio": "Expériences",
+    "portfolio": "Expériences <i><small>2 ans d'expérience</i></small>",
     "texa": {
       "name": "Texa",
       "skills": [
@@ -146,13 +151,13 @@
           "description": "Développement sur une application Web de gestion des sinistres pour les assurances."
         },
         {
-          "description": "Développement de nouvelles fonctionnalités sur l'<b>IHM</b> et correction de bugs sur le backend."
+          "description": "Développement de nouvelles fonctionnalités sur l'<strong>IHM</strong> et correction de bugs sur le backend."
         },
         {
-          "description": "<b>Tests unitaires</b> Jasmine (Angular JS), <b>Tests d’intégration</b>/unitaires en Java (Junit, Mockito), <b>Tests d’acceptance</b> avec Fitnesse."
+          "description": "<strong>Tests unitaires</strong> Jasmine (Angular JS), <strong>Tests d’intégration</strong>/unitaires en Java (Junit, Mockito), <strong>Tests d’acceptance</strong> avec Fitnesse."
         },
         {
-          "description": "Mise en place des <b>pull requests sous Git</b>."
+          "description": "Mise en place des <strong>pull requests sous Git</strong>."
         }
       ]
     },
@@ -170,10 +175,10 @@
         ],
         "tasks": [
           {
-            "description": "Développement d’une <b>application Web avec API REST</b> de gestion des compétences agiles des consultants selon un modèle de données Graphe."
+            "description": "Développement d’une <strong>application Web avec API REST</strong> de gestion des compétences agiles des consultants selon un modèle de données Graphe."
           },
           {
-            "description": "Travail sur l’<b>expérience utilisateur</b> et développement de l’<b>IHM</b>."
+            "description": "Travail sur l’<strong>expérience utilisateur</strong> et développement de l’<strong>IHM</strong>."
           }
         ]
       },

@@ -40,71 +40,47 @@
 
 <header class="left-part">
 
-    <section class="responsive-row responsive-center">
-        <figure>
-            <img class="my-look bounce-in" src="{{&img.path}}/alili-hd.jpg?v={{&version}}"
-                 alt="{{img.caption.face}}">
-        </figure>
+    <div class="responsive-row responsive-center">
+        <img class="my-look bounce-in" src="{{&img.path}}/alili-hd.jpg?v={{&version}}"
+             alt="{{img.caption.face}} + ' ' + {{&version}}">
 
-        <section class="padding-responsive responsive-column responsive-center">
-            <h1 class="bigger-font-with-padding" title="{{&version}}">{{basics.name}}</h1>
-            <h1 class="bigger-font-with-padding dark-blue">{{basics.job}}</h1>
-            <h1 class="bigger-font-with-padding responsive-hide">{{contact.title}}</h1>
-            <section class="my-techs">
-                <figure>
-                    <a href="{{&contact.linkedin}}"><img
-                            src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
-                            alt="{{img.caption.linkedin}}" title="{{img.caption.linkedin}}"></a>
-                </figure>
-                <figure>
-                    <a href="{{&contact.github}}"><img src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
-                                                       alt="{{img.caption.github}}" title="{{img.caption.github}}"></a>
-                </figure>
-            </section>
-        </section>
-    </section>
+        <div class="padding-responsive responsive-column responsive-center">
+            <h1 class="bigger-font-with-padding"><span>{{basics.name}}</span>
+                <span class="dark-blue">{{basics.job}}</span></h1>
+            <h2 class="bigger-font-with-padding responsive-hide">{{contact.title}}</h2>
+            <div class="my-techs">
+                <a href="{{&contact.linkedin}}" target="_blank"><img
+                        src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
+                        alt="{{img.caption.linkedin}}"></a>
 
-    <h1 class="bigger-font-with-padding responsive-hide">{{skills.title}}</h1>
-    <section class="my-techs responsive-center">
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/js-logo.svg?v={{&version}}" alt="{{img.caption.js}}"
-                 title="{{img.caption.js}}">
-        </figure>
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/html-logo.svg?v={{&version}}" alt="{{img.caption.html}}"
-                 title="{{img.caption.html}}">
-        </figure>
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/css-logo.svg?v={{&version}}" alt="{{img.caption.css}}"
-                 title="{{img.caption.css}}">
-        </figure>
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/angular-logo.svg?v={{&version}}" alt="{{img.caption.angular}}"
-                 title="{{img.caption.angular}}">
-        </figure>
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/git-logo.svg?v={{&version}}" alt="{{img.caption.git}}"
-                 title="{{img.caption.git}}">
-        </figure>
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/agile-logo.svg?v={{&version}}" alt="{{img.caption.agile}}"
-                 title="{{img.caption.agile}}">
-        </figure>
-    </section>
+                <a href="{{&contact.github}}" target="_blank"><img src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
+                                                   alt="{{img.caption.github}}"></a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="bigger-font-with-padding responsive-hide">{{skills.title}}</h2>
+    <div class="my-techs responsive-center">
+        <img src="{{&img.path}}/{{img.logos}}/js-logo.svg?v={{&version}}" alt="{{img.caption.js}}">
+        <img src="{{&img.path}}/{{img.logos}}/html-logo.svg?v={{&version}}" alt="{{img.caption.html}}">
+        <img src="{{&img.path}}/{{img.logos}}/css-logo.svg?v={{&version}}" alt="{{img.caption.css}}">
+        <img src="{{&img.path}}/{{img.logos}}/angular-logo.svg?v={{&version}}" alt="{{img.caption.angular}}">
+        <img src="{{&img.path}}/{{img.logos}}/git-logo.svg?v={{&version}}" alt="{{img.caption.git}}">
+        <img src="{{&img.path}}/{{img.logos}}/agile-logo.svg?v={{&version}}" alt="{{img.caption.agile}}">
+    </div>
 </header>
 
 <section class="right-part">
 
-    <h1 class="title">{{basics.summary}}</h1>
-    <section class="normal-padding justify-text">
-        {{&basics.description}}
-    </section>
+    <h2 class="title">{{basics.summary}}</h2>
+    <div class="normal-padding">
+        {{#basics.description}}<p>{{&.}}</p>{{/basics.description}}
+    </div>
 
-    <h1 class="title">{{work.portfolio}}</h1>
-    <h2 class="subtitle">{{work.exp}}</h2>
-    <h2 class="subtitle">{{work.consulting}}</h2>
-    <section class="normal-padding">
-        <section class="big-bottom-padding">
+    <h2 class="title">{{&work.portfolio}}</h2>
+    <h3 class="subtitle">{{&work.consulting}}</h3>
+    <div class="normal-padding">
+        <div class="big-bottom-padding">
             <h4 class="blue-font">{{work.allianz.name}}</h4>
             <ul>
                 {{#work.allianz.tasks}}
@@ -114,9 +90,10 @@
                 {{/work.allianz.tasks}}
             </ul>
             <h4 class="italic-font">{{work.environment}}</h4>
-            <div>{{#work.allianz.skills}}<span class="blue-pin">{{.}}</span>{{/work.allianz.skills}}</div>
-        </section>
-        <section class="big-bottom-padding">
+            <ul>{{#work.allianz.skills}}
+                <li class="blue-pin">{{.}}</li>{{/work.allianz.skills}}</ul>
+        </div>
+        <div class="big-bottom-padding">
             <h4 class="blue-font">{{work.edf.name}}</h4>
             <ul>
                 {{#work.edf.tasks}}
@@ -127,9 +104,10 @@
             </ul>
 
             <h4 class="italic-font">{{work.environment}}</h4>
-            <div>{{#work.edf.skills}}<span class="blue-pin">{{.}}</span>{{/work.edf.skills}}</div>
-        </section>
-        <section class="big-bottom-padding">
+            <ul>{{#work.edf.skills}}
+                <li class="blue-pin">{{.}}</li>{{/work.edf.skills}}</ul>
+        </div>
+        <div class="big-bottom-padding">
             <h4 class="blue-font">{{work.texa.name}}</h4>
 
             <ul>
@@ -141,11 +119,12 @@
             </ul>
 
             <h4 class="italic-font">{{work.environment}}</h4>
-            <div>{{#work.texa.skills}}<span class="blue-pin">{{.}}</span>{{/work.texa.skills}}</div>
-        </section>
+            <ul>{{#work.texa.skills}}
+                <li class="blue-pin">{{.}}</li>{{/work.texa.skills}}</ul>
+        </div>
 
-        <h3 class="small-padding">{{work.internship}}</h3>
-        <section class="big-bottom-padding">
+        <p class="small-padding"><b>{{&work.internship}}</b></p>
+        <div class="big-bottom-padding">
             <h4 class="blue-font">{{work.zenika.name}}</h4>
 
             <ul>
@@ -157,10 +136,10 @@
             </ul>
 
             <h4 class="italic-font">{{work.environment}}</h4>
-            <div>{{#work.zenika.internship.skills}}
-                <span class="blue-pin">{{.}}</span>{{/work.zenika.internship.skills}}</div>
-        </section>
-        <section class="bottom-padding">
+            <ul>{{#work.zenika.internship.skills}}
+                <li class="blue-pin">{{.}}</li>{{/work.zenika.internship.skills}}</ul>
+        </div>
+        <div class="bottom-padding">
             <h4 class="blue-font">{{work.mediametrie.name}}</h4>
             <ul>
                 {{#work.mediametrie.tasks}}
@@ -171,67 +150,45 @@
             </ul>
 
             <h4 class="italic-font">{{work.environment}}</h4>
-            <div>{{#work.mediametrie.skills}}<span class="blue-pin">{{.}}</span>{{/work.mediametrie.skills}}</div>
-        </section>
-    </section>
+            <ul>{{#work.mediametrie.skills}}
+                <li class="blue-pin">{{.}}</li>{{/work.mediametrie.skills}}</ul>
+        </div>
+    </div>
 
-    <h1 class="title-with-margin">{{education.title}}</h1>
-    <h2 class="subtitle">{{&education.summary}}</h2>
-    <figure class="left-padding">
-        <a href="https://www.esiea.fr/"><img src="{{&img.path}}/{{img.logos}}/esiea-logo.png?v={{&version}}"
-                                             alt="{{img.caption.esiea}}" title="{{img.caption.esiea}}"></a>
-    </figure>
-
-    <section class="normal-padding">
+    <h2 class="title-with-margin-top">{{education.title}}</h2>
+    <h3 class="subtitle">{{&education.summary}}</h3>
+    <div class="normal-padding">
+        <a href="https://www.esiea.fr/" target="_blank"><img
+                src="{{&img.path}}/{{img.logos}}/esiea-logo.png?v={{&version}}"
+                alt="{{img.caption.esiea}}"></a>
 
         <h4 class="small-padding">{{education.pro.title}}</h4>
-        <div>{{#education.pro.skills}}<span class="blue-pin">{{.}}</span>{{/education.pro.skills}}</div>
+        <ul>{{#education.pro.skills}}
+            <li class="blue-pin">{{.}}</li>{{/education.pro.skills}}</ul>
         <h4 class="small-padding">{{skills.interest}}</h4>
-        <section class="my-techs">
-            <figure>
-                <img src="{{&img.path}}/{{img.logos}}/react-logo.svg?v={{&version}}" alt="{{img.caption.react}}"
-                     title="{{img.caption.react}}">
-            </figure>
-            <figure>
-                <img src="{{&img.path}}/{{img.logos}}/vue-logo.svg?v={{&version}}" alt="{{img.caption.vue}}"
-                     title="{{img.caption.vue}}">
-            </figure>
-            <figure>
-                <img src="{{&img.path}}/{{img.logos}}/nodejs-logo.svg?v={{&version}}" alt="{{img.caption.node}}"
-                     title="{{img.caption.node}}">
-            </figure>
-            <figure>
-                <img src="{{&img.path}}/{{img.logos}}/tdd-logo.png?v={{&version}}"
-                     alt="{{img.caption.tdd}}">
-            </figure>
-            <figure>
-                <img src="{{&img.path}}/{{img.logos}}/spring-logo.png?v={{&version}}" alt="{{img.caption.spring}}"
-                     title="{{img.caption.spring}}">
-            </figure>
-        </section>
-    </section>
+        <div class="my-techs">
+            <img src="{{&img.path}}/{{img.logos}}/react-logo.svg?v={{&version}}" alt="{{img.caption.react}}">
+            <img src="{{&img.path}}/{{img.logos}}/vue-logo.svg?v={{&version}}" alt="{{img.caption.vue}}">
+            <img src="{{&img.path}}/{{img.logos}}/nodejs-logo.svg?v={{&version}}" alt="{{img.caption.node}}">
+            <img src="{{&img.path}}/{{img.logos}}/tdd-logo.png?v={{&version}}"
+                 alt="{{img.caption.tdd}}">
+            <img src="{{&img.path}}/{{img.logos}}/spring-logo.png?v={{&version}}" alt="{{img.caption.spring}}">
+        </div>
+    </div>
 
-    <h1 class="title-with-margin">{{education.languages.title}}</h1>
-    <section class="normal-padding my-techs">
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/france-logo.svg?v={{&version}}" alt="{{img.caption.french}}"
-                 title="{{img.caption.french}}">
-        </figure>
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/angleterre-logo.svg?v={{&version}}"
-                 alt="{{img.caption.english}}" title="{{img.caption.english}}">
-        </figure>
+    <h2 class="title-with-margin">{{education.languages.title}}</h2>
+    <div class="normal-padding my-techs">
+        <img src="{{&img.path}}/{{img.logos}}/france-logo.svg?v={{&version}}" alt="{{img.caption.french}}">
+        <img src="{{&img.path}}/{{img.logos}}/angleterre-logo.svg?v={{&version}}"
+             alt="{{img.caption.english}}">
         <p class="small-padding">{{&education.languages.english}}</p>
-    </section>
+    </div>
 
-    <h1 class="title-with-margin">{{basics.hobbies}}</h1>
-    <section class="normal-padding">
-        <figure>
-            <img src="{{&img.path}}/{{img.logos}}/equitation-logo.svg?v={{&version}}" alt="{{img.caption.horse}}"
-                 title="{{img.caption.horse}}">
-        </figure>
-    </section>
+    <h2 class="title-with-margin">{{basics.hobbies}}</h2>
+    <div class="normal-padding">
+        <img src="{{&img.path}}/{{img.logos}}/equitation-logo.svg?v={{&version}}" alt="{{img.caption.horse}}">
+    </div>
 
-</section>
+    </section>
 </body>
 </html>

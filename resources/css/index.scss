@@ -31,27 +31,18 @@ html {
 
     @include img-style;
 
-    p,
-    li,
-    .justify-text {
-      text-align: justify;
-    }
-
-    section {
-      &.my-techs {
-        @include cust-flex(row, wrap);
-      }
+    .my-techs {
+      @include cust-flex(row, wrap);
     }
 
     @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
       @include cust-flex(row, nowrap);
 
-      section {
-        &.my-techs {
-          align-items: center;
-          justify-content: flex-start;
-        }
+      .my-techs {
+        align-items: center;
+        justify-content: flex-start;
       }
+
     }
 
     @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
@@ -74,7 +65,7 @@ html {
 
       @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
 
-        @include dimensions(215px, 100%);
+        @include dimensions(202px, 100%);
 
         .responsive-row {
           @include cust-flex(row, nowrap);
@@ -104,18 +95,12 @@ html {
       }
 
       @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
-        @include dimensions(calc(100% - 215px), 100%);
+        @include dimensions(calc(100% - 202px), 100%);
       }
 
     }
 
   }
 
-}
-
-@media print {
-  body {
-    display: none;
-  }
 }
 

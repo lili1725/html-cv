@@ -1,14 +1,15 @@
-$screen-width: 500px;
-$screen-height: 615px;
-$img-size: 40px;
-$blue-font: #428bca;
 $black-color: #000;
+$blue-font: #428bca;
 $blue-gradient-1: #d8f8ff;
 $blue-gradient-2: #aee5ef;
 $dark-blue: #275379;
+$img-size: 40px;
 $light-grey: #d3d3d3;
 $normal-font: 18px;
 $normal-padding: 10px;
+$orange-color: #ffa500;
+$screen-height: 615px;
+$screen-width: 500px;
 $white-color: #fff;
 
 @mixin dimensions($height, $width) {
@@ -32,21 +33,15 @@ $white-color: #fff;
 
 @mixin img-style {
 
-  figure {
-    padding: 3px;
+  img {
+    @include responsive-img($img-size, 5px);
 
-    &.left-padding {
-      padding-left: $normal-padding;
-    }
+    margin: 3px 3px 3px 0;
 
-    img {
-      @include responsive-img($img-size, 5px);
-
-      &.my-look {
-        border: 1px $black-color solid;
-        border-radius: 90px;
-        @include responsive-img(155px, 15px);
-      }
+    &.my-look {
+      border: 1px $black-color solid;
+      border-radius: 90px;
+      @include responsive-img(155px, 25px);
     }
   }
 }
@@ -74,9 +69,11 @@ $white-color: #fff;
 
 .bigger-font-with-padding {
   @extend %bigger-font;
+
   @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
     padding: $normal-padding 0;
   }
+
   @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
     padding: 0;
   }
@@ -85,6 +82,7 @@ $white-color: #fff;
 .blue-font {
   color: $blue-font;
   padding-bottom: $normal-padding;
+
   @include responsive-font($normal-font + 2px);
 
   & > * {
@@ -119,16 +117,12 @@ $white-color: #fff;
 %classic-title {
   @extend %bigger-font;
 
-  background-color: $light-grey;
+  background-color: $orange-color;
   padding: $normal-padding;
 }
 
 .dark-blue {
   color: $dark-blue;
-}
-
-.grey-background {
-  background-color: $light-grey;
 }
 
 .italic-font {
@@ -145,6 +139,7 @@ $white-color: #fff;
 }
 
 .subtitle {
+  background-color: $light-grey;
   padding: $normal-padding;
 
   @include responsive-font($normal-font + 1px);
@@ -162,6 +157,12 @@ $white-color: #fff;
   @extend %classic-title;
 
   margin: $normal-padding 0;
+}
+
+.title-with-margin-top {
+  @extend %classic-title;
+
+  margin-top: $normal-padding 0 0;
 }
 
 @keyframes bounceIn {
