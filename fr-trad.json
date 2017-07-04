@@ -4,8 +4,8 @@
     "description": [
       "Je développe en <strong>Javascript, HTML, CSS</strong> et j'interviens à Paris.",
       "Je participe régulièrement à des événements pour me former sur les dernières technologies Frontend comme React JS ou Angular.",
-      "Débutante Java et convaincue par les <strong>méthodes agiles</strong>, je suis capable d'intervenir sur des <strong>applications Web JS/Java</strong> dans un contexte projet.",
-      "Rigoureuse et investie, j'apporterai ma pierre à votre édifice dans la bonne humeur 🙂."
+      "Débutante Java et convaincue par les <strong>méthodes agiles</strong>, je suis capable d'intervenir sur des <strong>applications Web JS</strong>/Java dans un contexte projet.",
+      "Rigoureuse et investie, j'apporterai ma pierre à votre édifice 🙂."
     ],
     "hobbies": "Loisir",
     "job": "Développeuse Front",
@@ -40,31 +40,68 @@
   },
   "img": {
     "caption": {
-      "agile": "Méthodes agiles",
-      "angular": "Angular JS",
-      "css": "CSS",
       "eco": "Respectez l'environnement",
       "english": "Anglais",
       "esiea": "ESIEA",
       "face": "Portrait",
       "french": "Français",
-      "git": "Git",
       "github": "GitHub",
       "horse": "Equitation",
-      "html": "HTML",
-      "js": "JavaScript",
-      "linkedin": "Linkedin",
-      "node": "Node JS",
-      "react": "React JS",
-      "spring": "Spring",
-      "tdd": "Test Driven Development",
-      "vue": "Vue JS"
+      "linkedin": "Linkedin"
     },
     "logos": "logos",
     "path": "img"
   },
   "skills": {
     "interest": "Notions basiques",
+    "main": [
+      {
+        "imgSrc": "js-logo.svg",
+        "imgCaption": "JavaScript"
+      },
+      {
+        "imgSrc": "html-logo.svg",
+        "imgCaption": "HTML"
+      },
+      {
+        "imgSrc": "css-logo.svg",
+        "imgCaption": "CSS"
+      },
+      {
+        "imgSrc": "angular-logo.svg",
+        "imgCaption": "Angular JS"
+      },
+      {
+        "imgSrc": "git-logo.svg",
+        "imgCaption": "Git"
+      },
+      {
+        "imgSrc": "agile-logo.svg",
+        "imgCaption": "Méthodes agiles"
+      }
+    ],
+    "second": [
+      {
+        "imgSrc": "react-logo.svg",
+        "imgCaption": "React JS"
+      },
+      {
+        "imgSrc": "vue-logo.svg",
+        "imgCaption": "Vue JS"
+      },
+      {
+        "imgSrc": "nodejs-logo.svg",
+        "imgCaption": "Node JS"
+      },
+      {
+        "imgSrc": "tdd-logo.png",
+        "imgCaption": "Développement par les tests"
+      },
+      {
+        "imgSrc": "spring-logo.png",
+        "imgCaption": "Spring"
+      }
+    ],
     "tdd": "TDD",
     "title": "Compétences"
   },

@@ -1,13 +1,14 @@
 $black-color: #000;
-$blue-font: #428bca;
+$blue-color: #428bca;
 $blue-gradient-1: #d8f8ff;
 $blue-gradient-2: #aee5ef;
+$brown-color: #491c1e;
 $dark-blue: #275379;
 $img-size: 40px;
 $light-grey: #d3d3d3;
 $normal-font: 18px;
 $normal-padding: 10px;
-$orange-color: #ffa500;
+$orange-color: #ffc04c;
 $screen-height: 615px;
 $screen-width: 500px;
 $white-color: #fff;
@@ -36,7 +37,7 @@ $white-color: #fff;
   img {
     @include responsive-img($img-size, 5px);
 
-    margin: 3px 3px 3px 0;
+    margin: 0 5px 5px 0;
 
     &.my-look {
       border: 1px $black-color solid;
@@ -80,7 +81,7 @@ $white-color: #fff;
 }
 
 .blue-font {
-  color: $blue-font;
+  color: $blue-color;
   padding-bottom: $normal-padding;
 
   @include responsive-font($normal-font + 2px);
@@ -90,12 +91,12 @@ $white-color: #fff;
   }
 }
 
-.blue-pin {
-  background-color: $blue-font;
+.orange-pin {
+  background-color: $orange-color;
   border-radius: 8px;
-  color: $white-color;
+  color: $brown-color;
   display: inline-block;
-  font-weight: bold;
+  font-weight: 500;
   margin: 5px 5px 5px 0;
   padding: 1px 5px;
   white-space: nowrap;
@@ -117,7 +118,8 @@ $white-color: #fff;
 %classic-title {
   @extend %bigger-font;
 
-  background-color: $orange-color;
+  background-color: $blue-color;
+  color: $white-color;
   padding: $normal-padding;
 }
 
@@ -130,6 +132,10 @@ $white-color: #fff;
   padding-top: 5px;
 }
 
+.align-row {
+  @include cust-flex(row, wrap);
+}
+
 .normal-padding {
   padding: $normal-padding;
 }
@@ -140,6 +146,7 @@ $white-color: #fff;
 
 .subtitle {
   background-color: $light-grey;
+  color: $black-color;
   padding: $normal-padding;
 
   @include responsive-font($normal-font + 1px);
@@ -184,5 +191,11 @@ $white-color: #fff;
   100% {
     opacity: 1;
     transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes type {
+  from {
+    width: 0;
   }
 }

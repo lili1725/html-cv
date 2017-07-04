@@ -31,18 +31,8 @@ html {
 
     @include img-style;
 
-    .my-techs {
-      @include cust-flex(row, wrap);
-    }
-
     @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
       @include cust-flex(row, nowrap);
-
-      .my-techs {
-        align-items: center;
-        justify-content: flex-start;
-      }
-
     }
 
     @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
@@ -60,12 +50,19 @@ html {
 
       @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
 
-        @include dimensions(100%, 300px);
+        @include dimensions(100%, 200px);
+
+        .desktop-typing {
+          animation: type 3s steps(60, end);
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+        }
       }
 
       @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
 
-        @include dimensions(202px, 100%);
+        @include dimensions(150px, 100%);
 
         .responsive-row {
           @include cust-flex(row, nowrap);
@@ -90,12 +87,27 @@ html {
 
       overflow-y: auto;
 
+      .description {
+        &:first-child {
+          padding-bottom: 5px;
+        }
+
+        &:last-child {
+          padding-top: 5px;
+        }
+      }
+
+      .my-techs {
+        @include cust-flex(row, nowrap);
+        align-items: center;
+      }
+
       @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
-        @include dimensions(100%, calc(100% - 300px));
+        @include dimensions(100%, calc(100% - 200px));
       }
 
       @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
-        @include dimensions(calc(100% - 202px), 100%);
+        @include dimensions(calc(100% - 150px), 100%);
       }
 
     }
