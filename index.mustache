@@ -72,26 +72,25 @@
 
     <section>
         <h2 class="title">{{skills.title}}</h2>
-        <div class="normal-padding">
-            <ul>
-                {{#skills.main}}
-                    <li class="my-techs">
-                        <img src="{{&img.path}}/{{img.logos}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
-                        <p>{{&imgCaption}}</p>
-                    </li>
-                {{/skills.main}}
-            </ul>
+        <h3 class="subtitle">{{skills.solidBasics}}</h3>
+        <ul class="normal-padding">
+            {{#skills.main}}
+                <li class="my-techs">
+                    <img src="{{&img.path}}/{{img.logos}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
+                    <p>{{&imgCaption}}</p>
+                </li>
+            {{/skills.main}}
+        </ul>
 
-            <h4 class="small-padding">{{skills.interest}}</h4>
-            <ul>
-                {{#skills.second}}
-                    <li class="my-techs">
-                        <img src="{{&img.path}}/{{img.logos}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
-                        <p>{{&imgCaption}}</p>
-                    </li>
-                {{/skills.second}}
-            </ul>
-        </div>
+        <h3 class="subtitle">{{skills.basicKnowledge}}</h3>
+        <ul class="normal-padding">
+            {{#skills.second}}
+                <li class="my-techs">
+                    <img src="{{&img.path}}/{{img.logos}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
+                    <p>{{&imgCaption}}</p>
+                </li>
+            {{/skills.second}}
+        </ul>
     </section>
 
     <section>
@@ -200,7 +199,9 @@
         <h2 class="title-with-margin">{{basics.hobbies}}</h2>
         <div class="normal-padding">
             <img src="{{&img.path}}/{{img.logos}}/equitation-logo.svg?v={{&version}}" alt="{{img.caption.horse}}">
+
         </div>
+
     </section>
 
 </section>

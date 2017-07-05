@@ -7,7 +7,7 @@
       "Débutante Java et convaincue par les <strong>méthodes agiles</strong>, je suis capable d'intervenir sur des <strong>applications Web JS</strong>/Java dans un contexte projet.",
       "Rigoureuse et investie, j'apporterai ma pierre à votre édifice 🙂."
     ],
-    "hobbies": "Loisir",
+    "hobbies": "Loisirs",
     "job": "Développeuse Front",
     "keywords": "Alice Rimassa,HTML,CSS,JavaScript,CV,Resume",
     "name": "Alice Rimassa",
@@ -53,7 +53,7 @@
     "path": "img"
   },
   "skills": {
-    "interest": "Notions basiques",
+    "basicKnowledge": "Notions de base",
     "main": [
       {
         "imgSrc": "js-logo.svg",
@@ -95,13 +95,14 @@
       },
       {
         "imgSrc": "tdd-logo.png",
-        "imgCaption": "Développement par les tests"
+        "imgCaption": "TDD"
       },
       {
         "imgSrc": "spring-logo.svg",
         "imgCaption": "Spring"
       }
     ],
+    "solidBasics": "Bases solides",
     "tdd": "TDD",
     "title": "Compétences"
   },
