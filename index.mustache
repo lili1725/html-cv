@@ -73,20 +73,24 @@
     <section>
         <h2 class="title">{{skills.title}}</h2>
         <div class="normal-padding">
-            {{#skills.main}}
-                <div class="my-techs">
-                    <img src="{{&img.path}}/{{img.logos}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
-                    <p>{{&imgCaption}}</p>
-                </div>
-            {{/skills.main}}
+            <ul>
+                {{#skills.main}}
+                    <li class="my-techs">
+                        <img src="{{&img.path}}/{{img.logos}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
+                        <p>{{&imgCaption}}</p>
+                    </li>
+                {{/skills.main}}
+            </ul>
 
             <h4 class="small-padding">{{skills.interest}}</h4>
-            {{#skills.second}}
-                <div class="my-techs">
-                    <img src="{{&img.path}}/{{img.logos}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
-                    <p>{{&imgCaption}}</p>
-                </div>
-            {{/skills.second}}
+            <ul>
+                {{#skills.second}}
+                    <li class="my-techs">
+                        <img src="{{&img.path}}/{{img.logos}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
+                        <p>{{&imgCaption}}</p>
+                    </li>
+                {{/skills.second}}
+            </ul>
         </div>
     </section>
 
