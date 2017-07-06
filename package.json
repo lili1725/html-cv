@@ -19,7 +19,7 @@
     "build-html": "npm run build-data && mustache index.json index.mustache > index.html && npm run minify-html",
     "build-google-resources": "cpx resources/google/*.{html,txt,xml} dist/",
     "clean": "rimraf index.html && rimraf index.json && rimraf dist",
-    "images-min": "imagemin resources/img/* --out-dir=dist/img && imagemin resources/img/logos/* --out-dir=dist/img/logos",
+    "images-min": "imagemin resources/img/* --out-dir=dist/img && imagemin resources/img/logos/* --out-dir=dist/img/logos && imagemin resources/img/hobbies/* --out-dir=dist/img/hobbies",
     "minify-html": "html-minifier -o dist/index.html index.html",
     "sass-lint": "sass-lint -v -q",
     "sass-to-css": "node-sass --include-path scss resources/css/index.scss dist/css/index.css"

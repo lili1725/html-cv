@@ -108,7 +108,7 @@
                 </ul>
                 <h4 class="italic-font">{{work.environment}}</h4>
                 <ul>{{#work.allianz.skills}}
-                    <li class="orange-pin">{{.}}</li>{{/work.allianz.skills}}</ul>
+                    <li class="green-pin">{{.}}</li>{{/work.allianz.skills}}</ul>
             </div>
             <div class="big-bottom-padding">
                 <h4 class="blue-font">{{work.edf.name}}</h4>
@@ -122,7 +122,7 @@
 
                 <h4 class="italic-font">{{work.environment}}</h4>
                 <ul>{{#work.edf.skills}}
-                    <li class="orange-pin">{{.}}</li>{{/work.edf.skills}}</ul>
+                    <li class="green-pin">{{.}}</li>{{/work.edf.skills}}</ul>
             </div>
             <div class="big-bottom-padding">
                 <h4 class="blue-font">{{work.texa.name}}</h4>
@@ -137,7 +137,7 @@
 
                 <h4 class="italic-font">{{work.environment}}</h4>
                 <ul>{{#work.texa.skills}}
-                    <li class="orange-pin">{{.}}</li>{{/work.texa.skills}}</ul>
+                    <li class="green-pin">{{.}}</li>{{/work.texa.skills}}</ul>
             </div>
 
             <p class="small-padding"><b>{{&work.internship}}</b></p>
@@ -154,7 +154,7 @@
 
                 <h4 class="italic-font">{{work.environment}}</h4>
                 <ul>{{#work.zenika.internship.skills}}
-                    <li class="orange-pin">{{.}}</li>{{/work.zenika.internship.skills}}</ul>
+                    <li class="green-pin">{{.}}</li>{{/work.zenika.internship.skills}}</ul>
             </div>
             <div class="bottom-padding">
                 <h4 class="blue-font">{{work.mediametrie.name}}</h4>
@@ -168,7 +168,7 @@
 
                 <h4 class="italic-font">{{work.environment}}</h4>
                 <ul>{{#work.mediametrie.skills}}
-                    <li class="orange-pin">{{.}}</li>{{/work.mediametrie.skills}}</ul>
+                    <li class="green-pin">{{.}}</li>{{/work.mediametrie.skills}}</ul>
             </div>
         </div>
     </section>
@@ -183,7 +183,7 @@
 
             <h4 class="small-padding">{{education.pro.title}}</h4>
             <ul>{{#education.pro.skills}}
-                <li class="orange-pin">{{.}}</li>{{/education.pro.skills}}</ul>
+                <li class="green-pin">{{.}}</li>{{/education.pro.skills}}</ul>
         </div>
 
         <h2 class="title-with-margin">{{education.languages.title}}</h2>
@@ -196,10 +196,11 @@
     </section>
 
     <section>
-        <h2 class="title-with-margin">{{basics.hobbies}}</h2>
+        <h2 class="title-with-margin">{{hobbies.title}}</h2>
         <div class="normal-padding">
-            <img src="{{&img.path}}/{{img.logos}}/equitation-logo.svg?v={{&version}}" alt="{{img.caption.horse}}">
-
+            {{#hobbies.list}}
+                <img src="{{&img.path}}/{{img.hobbies}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
+            {{/hobbies.list}}
         </div>
 
     </section>

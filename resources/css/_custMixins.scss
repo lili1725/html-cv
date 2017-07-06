@@ -2,13 +2,12 @@ $black-color: #000;
 $blue-color: #428bca;
 $blue-gradient-1: #d8f8ff;
 $blue-gradient-2: #aee5ef;
-$brown-color: #491c1e;
 $dark-blue: #275379;
+$green-color: #009900;
 $img-size: 40px;
 $light-grey: #d3d3d3;
 $normal-font: 18px;
 $normal-padding: 10px;
-$orange-color: #ffc04c;
 $screen-height: 385px;
 $screen-width: 500px;
 $white-color: #fff;
@@ -120,6 +119,17 @@ $white-color: #fff;
   color: $dark-blue;
 }
 
+.green-pin {
+  background-color: $green-color;
+  border-radius: 8px;
+  color: $white-color;
+  display: inline-block;
+  font-weight: 500;
+  margin: 5px 5px 5px 0;
+  padding: 1px 5px;
+  white-space: nowrap;
+}
+
 .italic-font {
   font-style: italic;
   padding-top: 5px;
@@ -127,17 +137,6 @@ $white-color: #fff;
 
 .normal-padding {
   padding: $normal-padding;
-}
-
-.orange-pin {
-  background-color: $orange-color;
-  border-radius: 8px;
-  color: $brown-color;
-  display: inline-block;
-  font-weight: 500;
-  margin: 5px 5px 5px 0;
-  padding: 1px 5px;
-  white-space: nowrap;
 }
 
 .small-padding {

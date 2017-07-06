@@ -7,7 +7,6 @@
       "Débutante Java et convaincue par les <strong>méthodes agiles</strong>, je suis capable d'intervenir sur des <strong>applications Web JS</strong>/Java dans un contexte projet.",
       "Rigoureuse et investie, j'apporterai ma pierre à votre édifice 🙂."
     ],
-    "hobbies": "Loisirs",
     "job": "Développeuse Front",
     "keywords": "Alice Rimassa,HTML,CSS,JavaScript,CV,Resume",
     "name": "Alice Rimassa",
@@ -38,6 +37,23 @@
     "summary": "Ingénieur en Informatique diplômée de l'ESIEA Paris <i><small>en 2015</i></small>",
     "title": "Formations"
   },
+  "hobbies": {
+    "title": "Loisirs",
+    "list": [
+      {
+        "imgSrc": "equitation.svg",
+        "imgCaption": "Monter à cheval"
+      },
+      {
+        "imgSrc": "headphones.svg",
+        "imgCaption": "Ecouter de la musique"
+      },
+      {
+        "imgSrc": "book.svg",
+        "imgCaption": "Lire"
+      }
+    ]
+  },
   "img": {
     "caption": {
       "eco": "Respectez l'environnement",
@@ -49,6 +65,7 @@
       "horse": "Equitation",
       "linkedin": "Linkedin"
     },
+    "hobbies": "hobbies",
     "logos": "logos",
     "path": "img"
   },
