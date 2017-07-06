@@ -49,6 +49,22 @@
         "imgCaption": "Ecouter de la musique"
       },
       {
+        "imgSrc": "computer.svg",
+        "imgCaption": "Faire de l'ordinateur"
+      },
+      {
+        "imgSrc": "glass.svg",
+        "imgCaption": "Aller boire un verre"
+      },
+      {
+        "imgSrc": "movies.svg",
+        "imgCaption": "Aller au cinéma"
+      },
+      {
+        "imgSrc": "walk.svg",
+        "imgCaption": "Se promener"
+      },
+      {
         "imgSrc": "book.svg",
         "imgCaption": "Lire"
       }
