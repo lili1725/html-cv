@@ -57,11 +57,11 @@
             <h2 class="bigger-font-with-padding dark-blue" itemprop="jobTitle">{{basics.job}}</h2>
             <h3 class="responsive-hide bottom-padding">{{contact.title}}</h3>
             <div class="align-row">
-                <a href="{{&contact.linkedin}}" target="_blank" itemprop="sameAs"><img
+                <a href="{{&contact.linkedin}}" target="_blank" rel="noreferrer" itemprop="sameAs"><img
                         src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
                         alt="{{img.caption.linkedin}}"></a>
 
-                <a href="{{&contact.github}}" target="_blank" itemprop="sameAs"><img
+                <a href="{{&contact.github}}" target="_blank" rel="noreferrer" itemprop="sameAs"><img
                         src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
                         alt="{{img.caption.github}}"></a>
             </div>
@@ -186,7 +186,7 @@
         <section itemprop="alumniOf" itemscope itemtype="http://schema.org/Organization">
             <h3 class="subtitle" itemprop="name">{{&education.summary}}</h3>
             <div class="normal-padding">
-                <a href="https://www.esiea.fr/" target="_blank" itemprop="url"><img
+                <a href="https://www.esiea.fr/" target="_blank" rel="noreferrer" itemprop="url"><img
                         src="{{&img.path}}/{{img.logos}}/esiea-logo.png?v={{&version}}"
                         alt="{{img.caption.esiea}}"></a>
 
