@@ -83,6 +83,10 @@ html {
       }
     }
 
+    .print-img {
+      display: none;
+    }
+
     .right-part {
 
       overflow-y: auto;
@@ -110,6 +114,17 @@ html {
         @include dimensions(calc(100% - 150px), 100%);
       }
 
+    }
+
+    @media print {
+      .left-part, .right-part {
+        display: none;
+      }
+
+      .print-img {
+        display: block;
+        text-align: center;
+      }
     }
 
   }
