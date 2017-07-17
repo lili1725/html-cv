@@ -38,24 +38,25 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css?v={{&version}}">
 </head>
-<body class="my-resume">
+
+<body class="my-resume" itemscope itemtype="http://schema.org/Person">
 
 <header class="left-part">
 
     <div class="responsive-row responsive-center">
         <img class="my-look bounce-in" src="{{&img.path}}/alili-hd.jpg?v={{&version}}"
-             alt="{{img.caption.face}} + ' ' + {{&version}}">
+             alt="{{img.caption.face}} + ' ' + {{&version}}" itemprop="image">
 
         <div class="padding-responsive responsive-column responsive-center">
-            <h1 class="bigger-font-with-padding desktop-typing">{{basics.name}}</h1>
-            <h2 class="bigger-font-with-padding dark-blue">{{basics.job}}</h2>
+            <h1 class="bigger-font-with-padding desktop-typing" itemprop="name">{{basics.name}}</h1>
+            <h2 class="bigger-font-with-padding dark-blue" itemprop="jobTitle">{{basics.job}}</h2>
             <h3 class="responsive-hide bottom-padding">{{contact.title}}</h3>
             <div class="align-row">
-                <a href="{{&contact.linkedin}}" target="_blank"><img
+                <a href="{{&contact.linkedin}}" target="_blank" itemprop="sameAs"><img
                         src="{{&img.path}}/{{img.logos}}/linkedin-logo.svg?v={{&version}}"
                         alt="{{img.caption.linkedin}}"></a>
 
-                <a href="{{&contact.github}}" target="_blank"><img
+                <a href="{{&contact.github}}" target="_blank" itemprop="sameAs"><img
                         src="{{&img.path}}/{{img.logos}}/github-logo.svg?v={{&version}}"
                         alt="{{img.caption.github}}"></a>
             </div>
@@ -67,7 +68,7 @@
 
     <section>
         <h2 class="title">{{basics.summary}}</h2>
-        <div class="normal-padding">
+        <div class="normal-padding" itemprop="description">
             {{#basics.description}}<p class="description">{{&.}}</p>{{/basics.description}}
         </div>
     </section>
@@ -97,7 +98,7 @@
 
     <section>
         <h2 class="title">{{&work.portfolio}}</h2>
-        <h3 class="subtitle">{{&work.consulting}}</h3>
+        <h3 class="subtitle" itemprop="worksFor">{{&work.consulting}}</h3>
         <div class="normal-padding">
             <div class="big-bottom-padding">
                 <h4 class="blue-font">{{work.allianz.name}}</h4>
@@ -177,16 +178,18 @@
 
     <section>
         <h2 class="title-with-margin-top">{{education.title}}</h2>
-        <h3 class="subtitle">{{&education.summary}}</h3>
-        <div class="normal-padding">
-            <a href="https://www.esiea.fr/" target="_blank"><img
-                    src="{{&img.path}}/{{img.logos}}/esiea-logo.png?v={{&version}}"
-                    alt="{{img.caption.esiea}}"></a>
+        <section itemprop="alumniOf" itemscope itemtype="http://schema.org/Organization">
+            <h3 class="subtitle" itemprop="name">{{&education.summary}}</h3>
+            <div class="normal-padding">
+                <a href="https://www.esiea.fr/" target="_blank" itemprop="url"><img
+                        src="{{&img.path}}/{{img.logos}}/esiea-logo.png?v={{&version}}"
+                        alt="{{img.caption.esiea}}"></a>
 
-            <h4 class="small-padding">{{education.pro.title}}</h4>
-            <ul>{{#education.pro.skills}}
-                <li class="green-pin">{{.}}</li>{{/education.pro.skills}}</ul>
-        </div>
+                <h4 class="small-padding">{{education.pro.title}}</h4>
+                <ul>{{#education.pro.skills}}
+                    <li class="green-pin">{{.}}</li>{{/education.pro.skills}}</ul>
+            </div>
+        </section>
 
         <h2 class="title-with-margin">{{education.languages.title}}</h2>
         <div class="normal-padding align-row">
@@ -204,7 +207,6 @@
                 <img src="{{&img.path}}/{{img.hobbies}}/{{imgSrc}}?v={{&version}}" alt="{{&imgCaption}}">
             {{/hobbies.list}}
         </div>
-
     </section>
 
 </section>
