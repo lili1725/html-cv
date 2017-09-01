@@ -3,8 +3,8 @@
     "caption": "CV Alice",
     "description": [
       "Je développe en <strong>Javascript, HTML, CSS</strong> et j'interviens à Paris.",
-      "Je participe régulièrement à des événements pour me former sur les dernières technologies Frontend comme React JS ou Angular.",
-      "Débutante Java et convaincue par les <strong>méthodes agiles</strong>, je suis capable d'intervenir sur des <strong>applications Web JS</strong>/Java dans un contexte projet.",
+      "Je participe régulièrement à des événements pour me former sur les dernières technologies Frontend comme React ou Angular.",
+      "Convaincue par les <strong>méthodes agiles</strong>, je suis capable d'intervenir sur des <strong>applications Web</strong> dans un contexte projet.",
       "Rigoureuse et investie, j'apporterai ma pierre à votre édifice 🙂."
     ],
     "job": "Développeuse Front",
@@ -24,7 +24,7 @@
   },
   "education": {
     "languages": {
-      "english": "<strong>Anglais</strong> : TOEIC (890), deux mois de stage chez Nagra Media UK au Pays de Galles, travail à l'oral et à l'écrit chez Allianz.",
+      "english": "<strong>Anglais</strong> : TOEIC obtenu en 2015, deux mois de stage chez Nagra Media UK au Pays de Galles, travail à l'oral et à l'écrit chez Allianz.",
       "title": "Langues"
     },
     "pro": {
@@ -87,7 +87,7 @@
     "path": "img"
   },
   "skills": {
-    "basicKnowledge": "Notions de base",
+    "basicKnowledge": "Notions basiques",
     "main": [
       {
         "imgSrc": "js-logo.svg",
@@ -142,14 +142,12 @@
   },
   "work": {
     "allianz": {
-      "name": "Allianz",
+      "name": "Allianz <i><small>- 1 an - Juin 2016 à 2017</small></i>",
       "skills": [
         "Webix",
         "LESS",
-        "Java 8",
+        "Grunt - Npm",
         "Spring Boot",
-        "Maven",
-        "MySQL",
         "Scrum",
         "Jira"
       ],
@@ -167,11 +165,12 @@
     },
     "consulting": "Consultante junior pour Zenika Paris <i><small>entre aujourd'hui et Septembre 2015</i></small>",
     "edf": {
-      "name": "EDF R&D",
+      "name": "EDF R&D <i><small>- 3 mois</small></i>",
       "skills": [
         "Angular JS",
         "Bootstrap",
         "Lodash",
+        "Gulp - Npm",
         "SASS",
         "HighCharts",
         "ElasticSearch"
@@ -195,27 +194,36 @@
       ]
     },
     "environment": "Environnement",
-    "internship": "Stagiaire <i><small>avant Septembre 2015</i></small>",
-    "mediametrie": {
-      "name": "Médiamétrie",
+    "internship": "Stage de fin d'études <i><small>- 6 mois avant Septembre 2015</i></small>",
+    "osb": {
+      "name": "Ocea Smart Building <i><small>- Juin 2017 à aujourd'hui</small></i>",
       "skills": [
-        "C++",
-        "Civolution",
-        "SQLite"
+        "Angular JS",
+        "Material Design",
+        "SASS",
+        "Grunt - Npm",
+        "Spring Boot",
+        "Docker",
+        "Scrum"
       ],
       "tasks": [
         {
-          "description": "Application Desktop de mesure d'audience des programmes TV tatoués et diffusés par Internet, pour Windows."
+          "description": "Maintenance sur une application dédiée aux bailleurs sociaux afin de gérer leur patrimoine immobilier en matière de normes environnementales."
+        },
+        {
+          "description": "Ajout de graphes générés avec d3.js, travail sur des fiches de reporting Pdf."
+        },
+        {
+          "description": "Participation aux rituels agiles et aux mises en production sous Docker."
         }
       ]
     },
     "portfolio": "Expériences <i><small>2 ans d'expérience</i></small>",
     "texa": {
-      "name": "Texa",
+      "name": "Texa <i><small>- 6 mois</small></i>",
       "skills": [
         "Angular JS",
         "Bootstrap",
-        "Java 7",
         "Kanban"
       ],
       "tasks": [
@@ -226,7 +234,7 @@
           "description": "Développement de nouvelles fonctionnalités sur l'<strong>IHM</strong> et correction de bugs sur le backend."
         },
         {
-          "description": "<strong>Tests unitaires</strong> Jasmine (Angular JS), <strong>Tests d’intégration</strong>/unitaires en Java (Junit, Mockito), <strong>Tests d’acceptance</strong> avec Fitnesse."
+          "description": "<strong>Tests unitaires</strong> Jasmine (Angular JS), <strong>Tests d’acceptance</strong> avec Fitnesse."
         },
         {
           "description": "Mise en place des <strong>pull requests sous Git</strong>."
@@ -234,14 +242,11 @@
       ]
     },
     "zenika": {
-      "consulting": {
-      },
       "internship": {
         "skills": [
           "Angular JS",
-          "Java 7",
+          "Gulp - Npm",
           "Spring",
-          "Neo4j",
           "ElasticSearch",
           "Trello"
         ],
