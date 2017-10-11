@@ -2,7 +2,7 @@ version: '2'
 
 services:
   site:
-    image: lili1725/cv
+    image: eponae/cv
     command:
     - -csp
     - default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'
