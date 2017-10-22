@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://lili1725.fr/sitemap.xml
+Sitemap: https://eponae.fr/sitemap.xml

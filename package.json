@@ -26,11 +26,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lili1725/html-cv.git"
+    "url": "git+ssh://git@github.com/eponae/html-cv.git"
   },
-  "author": "lili1725",
+  "author": "eponae",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lili1725/html-cv/issues"
+    "url": "https://github.com/eponae/html-cv/issues"
   }
 }
