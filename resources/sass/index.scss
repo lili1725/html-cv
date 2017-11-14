@@ -35,7 +35,7 @@ html {
       @include cust-flex(row, nowrap);
     }
 
-    @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
+    @media screen and (max-width: $screen-width), screen and (max-height: $screen-height), print {
       .padding-responsive {
         padding-left: 5px;
       }
@@ -60,7 +60,7 @@ html {
         }
       }
 
-      @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
+      @media screen and (max-width: $screen-width), screen and (max-height: $screen-height), print {
 
         @include dimensions(150px, 100%);
 
@@ -81,10 +81,6 @@ html {
         }
 
       }
-    }
-
-    .print-img {
-      display: none;
     }
 
     .right-part {
@@ -110,24 +106,16 @@ html {
         @include dimensions(100%, calc(100% - 200px));
       }
 
-      @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
+      @media screen and (max-width: $screen-width), screen and (max-height: $screen-height), print {
         @include dimensions(calc(100% - 150px), 100%);
       }
 
     }
 
-    @media print {
-      .left-part, .right-part {
-        display: none;
-      }
-
-      .print-img {
-        display: block;
-        text-align: center;
-      }
-    }
-
   }
 
 }
+
+@import 'print';
+
 

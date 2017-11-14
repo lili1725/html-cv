@@ -26,7 +26,7 @@ $white-color: #fff;
   @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
     height: $size;
   }
-  @media screen and (max-width: $screen-width), screen and (max-height: $screen-height) {
+  @media screen and (max-width: $screen-width), screen and (max-height: $screen-height), print {
     height: $size - $num-px;
   }
 }

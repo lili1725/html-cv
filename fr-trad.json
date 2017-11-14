@@ -142,14 +142,13 @@
   },
   "work": {
     "allianz": {
-      "name": "Allianz <i><small>- 1 an - Juin 2016 à 2017</small></i>",
+      "name": "Allianz <i><small>- Juin 2016 à Juin 2017</small></i>",
       "skills": [
         "Webix",
         "LESS",
         "Grunt - Npm",
         "Spring Boot",
-        "Scrum",
-        "Jira"
+        "Scrum"
       ],
       "tasks": [
         {
@@ -163,7 +162,27 @@
         }
       ]
     },
-    "consulting": "Consultante junior pour Zenika Paris <i><small>entre aujourd'hui et Septembre 2015</i></small>",
+    "artel": {
+      "name": "Artel <i><small>- Octobre 2017 à aujourd'hui</small></i>",
+      "skills": [
+        "Angular JS",
+        "Material Design",
+        "ES6",
+        "SASS",
+        "Gulp - Npm",
+        "Scrum",
+        "Jira"
+      ],
+      "tasks": [
+        {
+          "description": "Développement sur une <strong>application Web REST</strong> permettant d'exploiter les données remontées par des boîtiers connectés sur des flottes de voitures d'entreprises."
+        },
+        {
+          "description": "Participation au <strong>refactoring sur l'IHM</strong> afin de migrer vers la version 1.6 d'Angular pour se rapprocher d'une architecture orientée <strong>composants</strong>. Ecriture de <strong>tests unitaires</strong> avec Karma - Jasmine."
+        }
+      ]
+    },
+    "consulting": "Consultante junior pour Zenika Paris <i><small>Septembre 2015 à aujourd'hui</i></small>",
     "edf": {
       "name": "EDF R&D <i><small>- 3 mois</small></i>",
       "skills": [
@@ -180,23 +199,17 @@
           "description": "Développement d’une <strong>IHM responsive avec Angular JS pour ElasticSearch</strong>, afin d'étudier les données des centrales nucléaires."
         },
         {
-          "description": "Tri par colonne et pagination."
+          "description": "Tri par colonne et pagination. Affichage des données filtrées et agrégées sur des diagrammes et histogrammes dynamiques. Courbes avec <strong>lazy loading</strong> et affichage d'événements."
         },
         {
-          "description": "Affichage des données filtrées et agrégées sur des diagrammes et histogrammes dynamiques."
-        },
-        {
-          "description": "Courbes avec <strong>lazy loading</strong> et affichage d'événements."
-        },
-        {
-          "description": "Mise en place d’outils de maintien de <strong>qualité du code JS</strong> et de tâches d'industrialisation avec Gulp"
+          "description": "Mise en place d’outils de maintien de <strong>qualité du code JS</strong> et de tâches d'industrialisation avec Gulp."
         }
       ]
     },
     "environment": "Environnement",
     "internship": "Stage de fin d'études <i><small>- 6 mois avant Septembre 2015</i></small>",
     "osb": {
-      "name": "Ocea Smart Building <i><small>- Juin 2017 à aujourd'hui</small></i>",
+      "name": "Ocea Smart Building <i><small>- Juin à Septembre 2017</small></i>",
       "skills": [
         "Angular JS",
         "Material Design",

@@ -1,0 +1,29 @@
+@media print {
+
+  @page {
+    margin: 0;
+    size: portrait;
+  }
+}
+
+html {
+  @media print {
+    height: auto;
+    overflow: auto;
+    width: 100%;
+  }
+
+  .my-resume {
+    @media print {
+      height: auto;
+      overflow: auto;
+      width: 100%;
+    }
+
+    .right-part {
+      @media print {
+        overflow: unset;
+      }
+    }
+  }
+}

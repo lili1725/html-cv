@@ -5,24 +5,22 @@
   "devDependencies": {
     "node-sass": "4.5.3",
     "sass-lint": "1.10.2",
-    "postcss-cli": "4.0.0",
     "imagemin-cli": "3.0.0",
     "rimraf": "2.6.1",
     "mustache": "2.3.0",
-    "html-minifier": "3.5.2",
-    "cpx": "1.5.0"
+    "html-minifier": "3.5.2"
   },
   "scripts": {
-    "build": "npm install && npm run clean && npm run images-min && npm run build-css && npm run build-google-resources && npm run build-html",
+    "build": "npm run clean && npm run images-min && npm run build-css && npm run build-google-resources && npm run build-html",
     "build-css": "npm run sass-lint && npm run sass-to-css",
     "build-data": "node addVersionToJson.js",
     "build-html": "npm run build-data && mustache index.json index.mustache > index.html && npm run minify-html",
-    "build-google-resources": "cpx resources/google/*.{html,txt,xml} dist/",
+    "build-google-resources": "cp resources/google/* dist/",
     "clean": "rimraf index.html && rimraf index.json && rimraf dist",
     "images-min": "imagemin resources/img/* --out-dir=dist/img && imagemin resources/img/logos/* --out-dir=dist/img/logos && imagemin resources/img/hobbies/* --out-dir=dist/img/hobbies",
     "minify-html": "html-minifier -o dist/index.html index.html",
     "sass-lint": "sass-lint -v -q",
-    "sass-to-css": "node-sass --include-path scss resources/css/index.scss dist/css/index.css"
+    "sass-to-css": "node-sass --include-path scss resources/sass/index.scss dist/css/index.css"
   },
   "repository": {
     "type": "git",
