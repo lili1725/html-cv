@@ -1,3 +1,3 @@
-FROM vibioh/viws
+FROM vibioh/viws:light
 
 COPY ./dist/ /www/
