@@ -20,14 +20,14 @@ notifications:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: 'curl -H "Authorization: GitHub ${GITHUB_OAUTH_TOKEN}" -X POST https://dashboard-api.vibioh.fr/deploy/cv/ --data-binary @docker-compose.yml'
+  script: 'curl -u "${DEPLOY_CREDENTIALS}" -X POST https://deploy.vibioh.fr/eponae-cv/${GIT_COMMIT} --data-binary @docker-compose.yml'
   on:
     all_branches: true
     condition: ${TRAVIS_BRANCH} == 'master'
 - provider: script
   skip_cleanup: true
   script: >-
-    cat docker-compose.yml | sed "s|traefik.frontend.rule.*|traefik.frontend.rule: 'Host: www-${TRAVIS_BRANCH}.eponae.fr'|" | sed "s|${DOCKER_IMAGE_DEFAULT}|${DOCKER_IMAGE_NAME}|" | curl -H 'Authorization: GitHub ${GITHUB_OAUTH_TOKEN}' -X POST https://dashboard-api.vibioh.fr/deploy/cv-${TRAVIS_BRANCH}/ --data-binary @-
+    cat docker-compose.yml | sed "s|traefik.frontend.rule.*|traefik.frontend.rule: 'Host: www-${TRAVIS_BRANCH}.eponae.fr'|" | sed "s|${DOCKER_IMAGE_DEFAULT}|${DOCKER_IMAGE_NAME}|" | curl -u '${DEPLOY_CREDENTIALS}' -X POST https://deploy.vibioh.fr/eponae-cv-${TRAVIS_BRANCH}/${TRAVIS_COMMIT} --data-binary @-
   on:
     all_branches: true
     condition: ${TRAVIS_BRANCH} != 'master'
