@@ -20,7 +20,7 @@ notifications:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: 'curl -u "${DEPLOY_CREDENTIALS}" -X POST "https://deploy.vibioh.fr/eponae-cv/${GIT_COMMIT}" --data-binary @docker-compose.yml'
+  script: 'curl -u "${DEPLOY_CREDENTIALS}" -X POST "https://deploy.vibioh.fr/eponae-cv/${TRAVIS_COMMIT}" --data-binary @docker-compose.yml'
   on:
     all_branches: true
     condition: ${TRAVIS_BRANCH} == 'master'
