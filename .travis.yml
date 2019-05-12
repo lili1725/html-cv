@@ -1,33 +1,40 @@
-language: node_js
-sudo: required
-services:
-- docker
-node_js: 7
-script: |
-  npm run build
+jobs:
+  include:
+  - stage: Build
 
-  DOCKER_IMAGE_DEFAULT=${DOCKER_USER}/cv
-  DOCKER_IMAGE_NAME=${DOCKER_IMAGE_DEFAULT}
-  if [ "${TRAVIS_BRANCH}" != "master" ]; then
-    DOCKER_IMAGE_NAME=${DOCKER_IMAGE_NAME}:${TRAVIS_BRANCH}
-  fi
+    sudo: required
+    services:
+    - docker
+    script: docker build --build-arg "APP_VERSION=${TRAVIS_COMMIT}" -t "eponae/cv:${TRAVIS_COMMIT}" .
+    after_success:
+    - echo "${DOCKER_PASS}" | docker login -u "eponae" --password-stdin
+    - docker push "eponae/cv:${TRAVIS_COMMIT}"
 
-  docker build -t ${DOCKER_IMAGE_NAME} .
-after_success: |
-  docker login -u ${DOCKER_USER} -p ${DOCKER_PASS} && docker push ${DOCKER_IMAGE_NAME}
+  - stage: Publish
+
+    sudo: required
+    services:
+    - docker
+    script:
+    - echo "${DOCKER_PASS}" | docker login -u "eponae" --password-stdin
+    - docker pull "eponae/cv:${TRAVIS_COMMIT}"
+    - docker tag "eponae/cv:${TRAVIS_COMMIT}" eponae/cv:latest
+    - docker push eponae/cv:latest
+
+  - stage: Deploy
+
+    script: skip
+    deploy:
+      provider: script
+      skip_cleanup: true
+      script: bash script/deploy eponae-cv "${TRAVIS_COMMIT}" "@docker-compose.yml"
+
+stages:
+  - Build
+  - name: Publish
+    if: branch = master
+  - name: Deploy
+    if: branch = master
+
 notifications:
   email: false
-deploy:
-- provider: script
-  skip_cleanup: true
-  script: 'curl -u "${DEPLOY_CREDENTIALS}" -X POST "https://deploy.vibioh.fr/eponae-cv/${TRAVIS_COMMIT}" --data-binary @docker-compose.yml'
-  on:
-    all_branches: true
-    condition: ${TRAVIS_BRANCH} == 'master'
-- provider: script
-  skip_cleanup: true
-  script: >-
-    cat docker-compose.yml | sed "s|traefik.frontend.rule.*|traefik.frontend.rule: 'Host: www-${TRAVIS_BRANCH}.eponae.fr'|" | sed "s|${DOCKER_IMAGE_DEFAULT}|${DOCKER_IMAGE_NAME}|" | curl -u '${DEPLOY_CREDENTIALS}' -X POST https://deploy.vibioh.fr/eponae-cv-${TRAVIS_BRANCH}/${TRAVIS_COMMIT} --data-binary @-
-  on:
-    all_branches: true
-    condition: ${TRAVIS_BRANCH} != 'master'
