@@ -3,11 +3,6 @@ version: '2'
 services:
   site:
     image: eponae/cv
-    command:
-    - -csp
-    - default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'
-    - -headers
-    - X-UA-Compatible:IE-edge
     labels:
       traefik.http.routers.eponae-cv-http.rule: Host(`eponae.fr`) || Host(`www.eponae.fr`)
       traefik.http.routers.eponae-cv-http.entrypoints: http
@@ -16,9 +11,11 @@ services:
       traefik.http.routers.eponae-cv-https.entrypoints: https
       traefik.http.routers.eponae-cv-https.middlewares: compress@file, web-limit@file
       traefik.http.routers.eponae-cv-https.tls: true
-      traefik.http.routers.eponae-cv-https.tls.certResolver: default
-      traefik.http.services.eponae-cv-service.loadbalancer.passhostheader: true
+      traefik.http.routers.eponae-cv-https.tls.certresolver: default
       traefik.http.services.eponae-cv-service.loadbalancer.server.port: '1080'
+    environment:
+      VIWS_CSP: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'
+      VIWS_HEADERS: X-UA-Compatible:IE-edge
     logging:
       driver: json-file
       options:
