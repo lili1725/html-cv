@@ -7,9 +7,12 @@ services:
       traefik.http.routers.eponae-cv-http.rule: Host(`eponae.fr`) || Host(`www.eponae.fr`)
       traefik.http.routers.eponae-cv-http.entrypoints: http
       traefik.http.routers.eponae-cv-http.middlewares: redirect@file
+      traefik.http.middlewares.eponae-wwwredirect.redirectregex.regex: ^https://eponae.fr(.*)
+      traefik.http.middlewares.eponae-wwwredirect.redirectregex.replacement: https://www.eponae.fr$${1}
+      traefik.http.middlewares.eponae-wwwredirect.redirectregex.permanent: true
       traefik.http.routers.eponae-cv-https.rule: Host(`eponae.fr`) || Host(`www.eponae.fr`)
       traefik.http.routers.eponae-cv-https.entrypoints: https
-      traefik.http.routers.eponae-cv-https.middlewares: compress@file, web-limit@file
+      traefik.http.routers.eponae-cv-https.middlewares: compress@file, web-limit@file, eponae-wwwredirect
       traefik.http.routers.eponae-cv-https.tls: true
       traefik.http.routers.eponae-cv-https.tls.certresolver: default
       traefik.http.services.eponae-cv-service.loadbalancer.server.port: '1080'
