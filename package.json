@@ -4,12 +4,12 @@
   "description": "CV Alice",
   "devDependencies": {
     "html-minifier": "4.0.0",
-    "imagemin-cli": "4.0.1",
+    "imagemin-cli": "5.0.0",
     "jpegtran-bin": "4.0.0",
-    "mustache": "3.0.1",
+    "mustache": "3.1.0",
     "node-sass": "4.12.0",
-    "optipng-bin": "5.1.0",
-    "rimraf": "2.6.3",
+    "optipng-bin": "6.0.0",
+    "rimraf": "3.0.0",
     "sass-lint": "1.13.1"
   },
   "scripts": {
