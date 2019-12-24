@@ -1,3 +1,5 @@
+---
+
 options:
   formatter: stylish
 files:
@@ -69,8 +71,8 @@ rules:
   hex-notation: 1
   indentation: 1
   leading-zero:
-      - 1
-      - include: true
+    - 1
+    - include: true
   max-line-length: 0
   max-file-line-count: 0
   nesting-depth: 0

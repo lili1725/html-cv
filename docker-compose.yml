@@ -1,3 +1,5 @@
+---
+
 version: '2'
 
 services:
@@ -18,14 +20,10 @@ services:
       traefik.http.services.eponae-cv-service.loadbalancer.server.port: '1080'
     environment:
       VIWS_CSP: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'
-      VIWS_HEADERS: X-UA-Compatible:IE-edge
-    logging:
-      driver: json-file
-      options:
-        max-size: '10m'
+      VIWS_HEADERS: X-UA-Compatible:ie=edge~content-language:fr
     restart: on-failure:5
     read_only: true
     cpu_shares: 128
     mem_limit: 67108864
     security_opt:
-    - no-new-privileges
+      - no-new-privileges

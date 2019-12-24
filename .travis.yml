@@ -1,40 +1,43 @@
+---
+
 jobs:
   include:
-  - stage: Build
+    - stage: Build
 
-    sudo: required
-    services:
-    - docker
-    script: docker build --build-arg "APP_VERSION=${TRAVIS_COMMIT}" -t "eponae/cv:${TRAVIS_COMMIT}" .
-    after_success:
-    - echo "${DOCKER_PASS}" | docker login -u "eponae" --password-stdin
-    - docker push "eponae/cv:${TRAVIS_COMMIT}"
+      sudo: required
+      language: minimal
+      services:
+        - docker
+      script:
+        - docker build --build-arg "APP_VERSION=${TRAVIS_COMMIT}" -t "eponae/cv:${TRAVIS_COMMIT}" .
+      after_success:
+        - echo "${DOCKER_PASS}" | docker login -u "eponae" --password-stdin
+        - docker push "eponae/cv:${TRAVIS_COMMIT}"
 
-  - stage: Publish
+    - stage: Publish
 
-    sudo: required
-    services:
-    - docker
-    script:
-    - echo "${DOCKER_PASS}" | docker login -u "eponae" --password-stdin
-    - docker pull "eponae/cv:${TRAVIS_COMMIT}"
-    - docker tag "eponae/cv:${TRAVIS_COMMIT}" eponae/cv:latest
-    - docker push eponae/cv:latest
+      sudo: required
+      language: minimal
+      services:
+        - docker
+      script:
+        - echo "${DOCKER_PASS}" | docker login -u "eponae" --password-stdin
+        - curl -q -sSL --max-time 10 "https://raw.githubusercontent.com/ViBiOh/scripts/master/bootstrap" | bash -s "docker_promote"
+        - scripts/docker_promote "eponae/cv" "${TRAVIS_COMMIT}"
 
-  - stage: Deploy
+    - stage: Deploy
 
-    script: skip
-    deploy:
-      provider: script
-      skip_cleanup: true
-      script: bash script/deploy eponae-cv "@docker-compose.yml"
+      language: minimal
+      script:
+        - curl -q -sSL --max-time 10 "https://raw.githubusercontent.com/ViBiOh/scripts/master/bootstrap" | bash -s "deploy"
+        - scripts/deploy eponae "@docker-compose.yml"
 
 stages:
   - Build
   - name: Publish
-    if: branch = master
+    if: branch = master && type = push
   - name: Deploy
-    if: branch = master
+    if: branch = master && type = push
 
 notifications:
   email: false
