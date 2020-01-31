@@ -1,8 +1,8 @@
-@import 'custMixins';
+@import "custMixins";
 
 * {
   box-sizing: border-box;
-  font-family: 'Courier New', sans-serif;
+  font-family: "Garamond", serif;
   line-height: 28px;
   margin: 0;
   padding: 0;
@@ -13,17 +13,14 @@
   li {
     list-style-type: none;
   }
-
 }
 
 html {
-
   height: 100%;
   overflow: hidden;
   width: 100%;
 
   .my-resume {
-
     -webkit-overflow-scrolling: touch;
     height: 100%;
     overflow: hidden;
@@ -35,21 +32,21 @@ html {
       @include cust-flex(row, nowrap);
     }
 
-    @media screen and (max-width: $screen-width), screen and (max-height: $screen-height), print {
+    @media screen and (max-width: $screen-width),
+      screen and (max-height: $screen-height),
+      print {
       .padding-responsive {
         padding-left: 5px;
       }
     }
 
     .left-part {
-
       background: linear-gradient(to right, $blue-gradient-1, $blue-gradient-2);
       padding: $normal-padding;
 
       @include cust-flex(column, nowrap);
 
       @media screen and (min-width: $screen-width) and (min-height: $screen-height) {
-
         @include dimensions(100%, 200px);
 
         .desktop-typing {
@@ -60,8 +57,9 @@ html {
         }
       }
 
-      @media screen and (max-width: $screen-width), screen and (max-height: $screen-height), print {
-
+      @media screen and (max-width: $screen-width),
+        screen and (max-height: $screen-height),
+        print {
         @include dimensions(150px, 100%);
 
         .responsive-row {
@@ -79,12 +77,10 @@ html {
         .responsive-hide {
           display: none;
         }
-
       }
     }
 
     .right-part {
-
       overflow-y: auto;
 
       .description {
@@ -106,16 +102,13 @@ html {
         @include dimensions(100%, calc(100% - 200px));
       }
 
-      @media screen and (max-width: $screen-width), screen and (max-height: $screen-height), print {
+      @media screen and (max-width: $screen-width),
+        screen and (max-height: $screen-height),
+        print {
         @include dimensions(calc(100% - 150px), 100%);
       }
-
     }
-
   }
-
 }
 
-@import 'print';
-
-
+@import "print";
