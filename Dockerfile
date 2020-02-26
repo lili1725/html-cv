@@ -1,13 +1,9 @@
-FROM node:11 as builder
+FROM vibioh/viws
 
-WORKDIR /usr/src/app
-COPY . .
+ENV VIWS_CSP "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+ENV VIWS_HEADERS X-UA-Compatible:ie=edge~content-language:fr
 
-RUN npm ci \
- && npm run build
+ARG VERSION
+ENV VERSION=${VERSION}
 
-FROM vibioh/viws:light
-
-ARG APP_VERSION
-ENV VERSION=${APP_VERSION}
-COPY --from=builder /usr/src/app/dist/ /www/
+COPY dist/ /www/
